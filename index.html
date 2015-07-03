@@ -20,20 +20,17 @@
   <body>
     <div id="content">
       <div id="container">
-        <div id="main"><img></img></div>
-        <div id="buttons-container">
-          <div id="buttons">
-            <button id="ss">SuperSociety</button>
-            <button id="pp">PixelPipes</button>
-            <button id="rl">RailsLite</button>
-            <button id="gh">GitHub</button>
-            <button id="li">LinkedIn</button>
-            <!-- <a href="http://supersociety.us">SuperSociety</a>
-            <a href="http://persever.github.io/PixelPipes">PixelPipes</a>
-            <a href="http://github.com/persever/RailsLite">RailsLite</a>
-            <a href="http://github.com/persever">GitHub</a>
-            <a href="http://linkedin.com/in/kellywitwickifaddegon">LinkedIn</a> -->
-          </div>
+        <div id="main"></div>
+        <div id="buttons">
+          <button id="ss">SuperSociety</button>
+          <button id="pp">PixelPipes</button>
+          <button id="rl">RailsLite</button>
+          <a id="gh" href="http://github.com/persever" target="_blank">GitHub</a>
+          <a id="li" href="http://linkedin.com/in/kellywitwickifaddegon" target="_blank">LinkedIn</a>
+          <button id="resume-button">Resume</button>
+          <!-- <a href="http://supersociety.us">SuperSociety</a>
+          <a href="http://persever.github.io/PixelPipes">PixelPipes</a>
+          <a href="http://github.com/persever/RailsLite">RailsLite</a> -->
         </div>
       </div>
     </div>
@@ -45,7 +42,12 @@
       function handleClick (event) {
         event.preventDefault();
         var id = $(event.currentTarget).attr("id")
-        $("#main img").attr("src", id + ".jpg");
+        $("#main img").addClass("fadeOut");
+        setTimeout(function () {
+          $("#main img").remove();
+          $("#main").append($("<img>").attr("src", id + ".png"));
+        }, 1);
+        // demo pixelpipes by settimeout switching through screenshots of play!!
       };
 
       $("button").on("click", handleClick)
