@@ -1,0 +1,74 @@
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+#content {
+  position: fixed;
+  /*is there a white space on the right side?*/
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #f4f8fc;
+}
+
+#container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% - 150px), -50%);
+}
+
+#container::after, #buttons-container::after {
+  content: "";
+  clear: both;
+}
+
+#main {
+  float: left;
+  height: 500px;
+  width: 500px;
+  border-radius: 500px;
+  /*use a gradient border? make it rotate!*/
+  border: 10px solid #128BFF;
+}
+
+#main img {
+  height: 100%;
+  width: 100%;
+  /*match main!*/
+  border-radius: 500px;
+  overflow: hidden;
+}
+
+#buttons-container {
+  float: left;
+  padding-left: 100px;
+  /*height: 100%;*/
+}
+
+#buttons {
+  position: absolute;
+  top: 50%;
+  /*make it size per the #main size!!*/
+  transform: translate(500px, -50%);
+}
+
+#buttons button {
+  display: block;
+  width: 250px;
+  margin: 15px;
+  padding: 9px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  height: 40px;
+  /*border-radius: 2px;*/
+  /*border: 2px solid #006CD4;
+  background: #f4f8fc;
+  color: #006CD4;*/
+  border: none;
+  background: #006CD4;
+  color: #f4f8fc;
+  border-radius: 4px;
+}

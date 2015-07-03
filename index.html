@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <title>Kelly Witwicki Faddegon</title>
+    <title>Kelly</title>
     <style>
       html, body, canvas {
         padding: 0;
@@ -10,12 +11,45 @@
       }
     </style>
 
-    <link rel="icon" href="lightbulb.png">
-
+    <!-- DRAW FAVICON TO MATCH MAIN VIEW STYLE <link rel="icon" href="lightbulb.png"> -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400'
+          rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="index.scss.css"></link>
   </head>
 
   <body>
-    <div id="content"></div>
+    <div id="content">
+      <div id="container">
+        <div id="main"><img></img></div>
+        <div id="buttons-container">
+          <div id="buttons">
+            <button id="ss">SuperSociety</button>
+            <button id="pp">PixelPipes</button>
+            <button id="rl">RailsLite</button>
+            <button id="gh">GitHub</button>
+            <button id="li">LinkedIn</button>
+            <!-- <a href="http://supersociety.us">SuperSociety</a>
+            <a href="http://persever.github.io/PixelPipes">PixelPipes</a>
+            <a href="http://github.com/persever/RailsLite">RailsLite</a>
+            <a href="http://github.com/persever">GitHub</a>
+            <a href="http://linkedin.com/in/kellywitwickifaddegon">LinkedIn</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
+
+  <script src="jquery-2.1.4.min.js"></script>
+  <script>
+    (function () {
+      function handleClick (event) {
+        event.preventDefault();
+        var id = $(event.currentTarget).attr("id")
+        $("#main img").attr("src", id + ".jpg");
+      };
+
+      $("button").on("click", handleClick)
+    })();
+  </script>
+
 </html>
