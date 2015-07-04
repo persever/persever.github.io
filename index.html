@@ -24,9 +24,9 @@
           <div id="main"></div>
         </div>
         <div id="buttons">
-          <button id="ss" data-url="http://supersociety.us">SuperSociety</button>
-          <button id="pp" data-url="http://persever.github.io/PixelPipes">PixelPipes</button>
-          <button id="rl" data-url="http://github.com/persever/RailsLite">RailsLite</button>
+          <button data-name="SuperSociety" data-url="http://supersociety.us">SuperSociety</button>
+          <button data-name="PixelPipes" data-url="http://persever.github.io/PixelPipes">PixelPipes</button>
+          <button data-name="RailsLite" data-url="http://github.com/persever/RailsLite">RailsLite</button>
           <a id="gh" href="http://github.com/persever" target="_blank">GitHub</a>
           <a id="li" href="http://linkedin.com/in/kellywitwickifaddegon" target="_blank">LinkedIn</a>
           <button id="resume-button">Resume</button>
@@ -41,22 +41,28 @@
     (function () {
       function handleClick (event) {
         event.preventDefault();
-        var id = $(event.currentTarget).attr("id");
+        var name = $(event.currentTarget).data("name");
         var url = $(event.currentTarget).data("url");
         $("#main img").addClass("fadeOut");
+        $("#main video").addClass("fadeOut");
         $("#main img").remove();
-        // $("#external-link").empty();
-        $("#main").append($("<img>").attr("src", id + ".png"));
-        if ($("#external-link a")[0]) {
-          // please ensure this is working, here and with css
-          $("#external-link a").addClass("fadeOut");
-          setTimeout(function () {
-            $("#external-link a").text("PLACEHOLDER").attr("href", url);
-          }, 1000)
+        $("#main video").remove();
+        if (name === "SuperSociety" || "PixelPipes") {
+          $("#main").append($("<video #video autoplay loop src=\"" + name + ".mov\" type=\"video/mov\">"));
         } else {
-          $("#external-link").append($("<a>").text("PLACEHOLDER").attr("href", url));
+          $("#main").append($("<img>").attr("src", name + ".png"));
+        }
+        if ($("#video")) {
+          $("#video").volume = 0.0;
+        }
+        if ($("#external-link a")[0]) {
+          $("#external-link a").text($(event.currentTarget).data("name"))
+                               .attr("href", url);
+        } else {
+          $("#external-link").append($("<a>")
+                             .text($(event.currentTarget).data("name"))
+                             .attr("href", url));
         };
-        // demo pixelpipes by settimeout switching through screenshots of play!!
       };
 
       $("button").on("click", handleClick)
