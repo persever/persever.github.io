@@ -12,6 +12,11 @@
   background-color: #f4f8fc;
 }
 
+#container::after, #main-container::after {
+  content: "";
+  clear: both;
+}
+
 #container {
   position: absolute;
   top: 50%;
@@ -19,15 +24,18 @@
   transform: translate(calc(-50% - 150px), -50%);
 }
 
-#container::after, #buttons-container::after {
-  content: "";
-  clear: both;
+#main-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #main {
-  float: left;
   height: 500px;
   width: 500px;
+  overflow: hidden;
+  background-color: black;
   border-radius: 500px;
   /*use a gradient border? make it rotate!*/
   border: 10px solid #128BFF;
@@ -73,15 +81,68 @@
   animation-name: fadeOut;
 }
 
-#buttons {
+#external-link {
+  z-index: -1;
+  width: 520px;
   position: absolute;
-  padding-left: 100px;
-  top: 50%;
-  /*make it size per the #main size!!*/
-  transform: translate(500px, -50%);
+  left: 75px;
+  transform: translateY(calc(-50% + 300px));
+  -webkit-transform: translateY(calc(-50% + 300px));
+
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
 }
 
-#buttons button, #buttons a {
+@-webkit-keyframes slideIn {
+  0% {
+    top: calc(50% - 200px);
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    top: calc(50% - 200px);
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+#external-link a {
+  margin: 0 auto;
+
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+#buttons {
+  position: absolute;
+  /*make it size per the #main size!!*/
+  left: calc(250px + 50px);
+  transform: translateY(-50%);
+}
+
+#buttons button, #buttons a, #external-link a {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 9px;
+  text-align: center;
+  font-size: 16px;
+
   -webkit-transition: all 0.1s linear;
   -moz-transition: all 0.1s linear;
   -o-transition: all 0.1s linear;
@@ -89,41 +150,32 @@
 }
 
 #buttons button {
-  display: block;
   width: 250px;
   height: 40px;
-  margin: 15px;
-  padding: 9px;
-  font-size: 16px;
-  text-align: center;
-  border: none;
   /*slight gradient!*/
   background: #006CD4;
-  color: #f4f8fc;
+  border: none;
   border-radius: 4px;
+  color: #f4f8fc;
 }
 
-#buttons a {
+#buttons a, #external-link a {
   cursor: default;
-  display: block;
+  text-decoration: none;
   width: 228px;
   height: 18px;
-  margin: 15px;
-  padding: 9px;
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  border: 2px solid #006CD4;
   background: #f4f8fc;
-  color: #006CD4;
+  border: 2px solid #006CD4;
   border-radius: 4px;
+  color: #006CD4;
 }
 
-#buttons button:hover {
+#buttons button:hover, #buttons button.active {
   background-color: #01386D;
 }
 
-#buttons a:hover {
+#buttons a:hover, #buttons a:active,
+#external-link a:hover, #external-link a:active {
   border: 2px solid #01386D;
   color: #01386D;
 }

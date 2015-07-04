@@ -20,19 +20,19 @@
   <body>
     <div id="content">
       <div id="container">
-        <div id="main"></div>
+        <div id="main-container">
+          <div id="main"></div>
+        </div>
         <div id="buttons">
-          <button id="ss">SuperSociety</button>
-          <button id="pp">PixelPipes</button>
-          <button id="rl">RailsLite</button>
+          <button id="ss" data-url="http://supersociety.us">SuperSociety</button>
+          <button id="pp" data-url="http://persever.github.io/PixelPipes">PixelPipes</button>
+          <button id="rl" data-url="http://github.com/persever/RailsLite">RailsLite</button>
           <a id="gh" href="http://github.com/persever" target="_blank">GitHub</a>
           <a id="li" href="http://linkedin.com/in/kellywitwickifaddegon" target="_blank">LinkedIn</a>
           <button id="resume-button">Resume</button>
-          <!-- <a href="http://supersociety.us">SuperSociety</a>
-          <a href="http://persever.github.io/PixelPipes">PixelPipes</a>
-          <a href="http://github.com/persever/RailsLite">RailsLite</a> -->
         </div>
       </div>
+      <div id="external-link"></div>
     </div>
   </body>
 
@@ -41,12 +41,21 @@
     (function () {
       function handleClick (event) {
         event.preventDefault();
-        var id = $(event.currentTarget).attr("id")
+        var id = $(event.currentTarget).attr("id");
+        var url = $(event.currentTarget).data("url");
         $("#main img").addClass("fadeOut");
-        setTimeout(function () {
-          $("#main img").remove();
-          $("#main").append($("<img>").attr("src", id + ".png"));
-        }, 1);
+        $("#main img").remove();
+        // $("#external-link").empty();
+        $("#main").append($("<img>").attr("src", id + ".png"));
+        if ($("#external-link a")[0]) {
+          // please ensure this is working, here and with css
+          $("#external-link a").addClass("fadeOut");
+          setTimeout(function () {
+            $("#external-link a").text("PLACEHOLDER").attr("href", url);
+          }, 1000)
+        } else {
+          $("#external-link").append($("<a>").text("PLACEHOLDER").attr("href", url));
+        };
         // demo pixelpipes by settimeout switching through screenshots of play!!
       };
 
