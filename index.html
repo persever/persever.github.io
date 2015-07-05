@@ -57,12 +57,20 @@
         }
         if ($("#external-link a")[0]) {
           $("#external-link a").text($(event.currentTarget).data("name"))
+                               .append("<img src=\"external-link-icon-light.png\"></img>")
                                .attr("href", url);
         } else {
-          $("#external-link").append($("<a>")
+          $("#external-link").append($("<a target=\"_blank\">")
                              .text($(event.currentTarget).data("name"))
+                             .append("<img src=\"external-link-icon-light.png\"></img>")
                              .attr("href", url));
         };
+        $("#external-link a").on("mouseenter", function () {
+          $("#external-link img").attr("src", "external-link-icon-dark.png");
+        });
+        $("#external-link a").on("mouseleave", function () {
+          $("#external-link img").attr("src", "external-link-icon-light.png");
+        });
       };
 
       $("button").on("click", handleClick)

@@ -118,14 +118,12 @@
 
 #external-link a {
   margin: 0 auto;
+}
 
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
+#external-link img {
+  height: 12px;
+  width: 12px;
+  margin-left: 10px;
 }
 
 #buttons {
