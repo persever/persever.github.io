@@ -40,9 +40,11 @@
   <script>
     (function () {
       function handleClick (event) {
+        $("button").removeClass("active");
         event.preventDefault();
         var name = $(event.currentTarget).data("name");
         var url = $(event.currentTarget).data("url");
+        $(event.currentTarget).addClass("active");
         $("#main img").addClass("fadeOut");
         $("#main video").addClass("fadeOut");
         $("#main img").remove();

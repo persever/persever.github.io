@@ -2,6 +2,10 @@
   font-family: 'Raleway', sans-serif;
 }
 
+button:focus {
+  outline:0;
+}
+
 #content {
   position: fixed;
   /*is there a white space on the right side?*/
@@ -172,8 +176,7 @@
   background-color: #01386D;
 }
 
-#buttons a:hover, #buttons a:active,
-#external-link a:hover, #external-link a:active {
+#buttons a:hover, #external-link a:hover {
   border: 2px solid #01386D;
   color: #01386D;
 }
