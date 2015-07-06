@@ -145,7 +145,7 @@ button:focus {
   transform: translate(-50%, -50%);
 }
 
-#buttons button, #buttons a, #resume-button, #external-link a {
+#buttons button, #buttons a, #resume-button, #main-button, #external-link a {
   display: block;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -159,7 +159,7 @@ button:focus {
   transition: all 0.1s linear;
 }
 
-#buttons button, #resume-button {
+#buttons button:not(#resume-button) {
   font-weight: 300;
   width: 250px;
   height: 40px;
@@ -182,16 +182,28 @@ button:focus {
   color: #006CD4;
 }
 
-#buttons button:hover, #resume-button:hover, #buttons button.active {
+#buttons button:not(#resume-button):hover, #buttons button.active {
   background-color: #01386D;
 }
 
-/*#buttons a:hover {
-  background-color: #01386D;
-  border: 2px solid #01386D;
-  color: #f4f8fc;
-  font-weight: 300;
-}*/
+#resume-button, #main-button {
+  font-weight: 400;
+  width: 250px;
+  height: 40px;
+  background: none;
+  border: none;
+  color: #006CD4;
+}
+
+#main-button {
+  margin: 0 auto;
+}
+
+#resume-button:hover, #main-button:hover {
+  color: #01386D;
+}
+
+/* color border and arrow too! */
 
 #buttons a:hover, #external-link a:hover {
   border: 2px solid #01386D;
@@ -220,8 +232,16 @@ button:focus {
   height: 100%;
   width: 100%;
 
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+.content-inner.main {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
@@ -249,13 +269,6 @@ button:focus {
   animation-name: slideScreenUpIn;
 }
 
-.content-inner.main {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
 @-webkit-keyframes slideScreenUpOut {
   0% {
     top: 0%;
@@ -279,7 +292,71 @@ button:focus {
   animation-name: slideScreenUpOut;
 }
 
+
+@-webkit-keyframes slideScreenDownIn {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+@keyframes slideScreenDownIn {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+.slideScreenDownIn {
+  -webkit-animation-name: slideScreenDownIn;
+  animation-name: slideScreenDownIn;
+}
+
+@-webkit-keyframes slideScreenDownOut {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes slideScreenDownOut {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+.slideScreenDownOut {
+  -webkit-animation-name: slideScreenDownOut;
+  animation-name: slideScreenDownOut;
+}
+
 #resume {
   height: 100%;
   width: 100%;
+  overflow: scroll;
+  padding: 50px;
+  padding-top: 41px;
+}
+
+#resume-content {
+  width: calc(100% - 100px);
+  padding-bottom: 80px;
+  overflow: scroll;
+  font-size: 14px;
+  line-height: 1.25;
+  color: #01386D;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
 }
