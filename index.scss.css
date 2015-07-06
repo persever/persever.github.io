@@ -13,7 +13,7 @@ button:focus {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #f4f8fc;
+  background: black;
 }
 
 #container::after, #main-container::after {
@@ -159,31 +159,37 @@ button:focus {
   transition: all 0.1s linear;
 }
 
-#buttons button:not(#resume-button) {
+#resume-button, #main-button {
   font-weight: 300;
+  color: white !important;
+}
+
+#buttons button:not(#resume-button) {
+  font-weight: 400;
   width: 250px;
   height: 40px;
-  /*slight gradient!*/
-  background: #006CD4;
+  background: white;
   border: none;
   border-radius: 4px;
-  color: #f4f8fc;
+  color: #708090;
 }
 
 #buttons a, #external-link a {
-  font-weight: 400;
+  font-weight: 300;
   cursor: default;
   text-decoration: none;
   width: 228px;
   height: 18px;
-  background: #f4f8fc;
-  border: 2px solid #006CD4;
+  background: #708090;
+  border: 2px solid white;
   border-radius: 4px;
-  color: #006CD4;
+  color: white;
 }
 
 #buttons button:not(#resume-button):hover, #buttons button.active {
-  background-color: #01386D;
+  background-color: #708090;
+  color: white;
+  font-weight: 300;
 }
 
 #resume-button, #main-button {
@@ -192,7 +198,7 @@ button:focus {
   height: 40px;
   background: none;
   border: none;
-  color: #006CD4;
+  color: white;
 }
 
 #main-button {
@@ -200,14 +206,15 @@ button:focus {
 }
 
 #resume-button:hover, #main-button:hover {
-  color: #01386D;
+  color: #708090 !important;
 }
 
 /* color border and arrow too! */
 
 #buttons a:hover, #external-link a:hover {
-  border: 2px solid #01386D;
-  color: #01386D;
+  color: #708090;
+  border: 2px solid #708090;
+  background: white;
 }
 
 .relative-container {
@@ -355,17 +362,19 @@ button:focus {
   height: 100%;
   width: 100%;
   overflow: scroll;
-  padding: 50px;
   padding-top: 41px;
 }
 
 #resume-content {
   width: calc(100% - 100px);
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
   padding-bottom: 80px;
   overflow: scroll;
   font-size: 14px;
   line-height: 1.25;
-  color: #01386D;
+  color: white;
 }
 
 h2 {
@@ -385,7 +394,7 @@ h2 {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0,0,0,.7);
 
   -webkit-animation-duration: 1s;
   animation-duration: 1s;

@@ -193,7 +193,7 @@
           $(".content-inner.main").hide();
           $(".content-inner.main").removeClass("slideScreenUpOut");
           $(".content-inner.resume").removeClass("slideScreenUpIn");
-        }, 1500);
+        }, 1000);
       });
       $("#main-button").on("click", function () {
         $(".content-inner.main").addClass("slideScreenDownIn");
@@ -203,7 +203,7 @@
           $(".content-inner.resume").hide();
           $(".content-inner.main").removeClass("slideScreenDownIn");
           $(".content-inner.resume").removeClass("slideScreenDownOut");
-        }, 1500);
+        }, 1000);
       });
       resize();
       $(window).on("resize", resize);
