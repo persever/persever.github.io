@@ -20,15 +20,17 @@
   <body>
     <div id="content">
       <div class="content-inner main">
+        <div id="video-background"></div>
+        <div class="screen fadeIn"></div>
         <div style="float:left; width: 10%; height: 100%;"></div>
         <div style="float:left; width: 80%; height: 100%; text-align: center;">
           <div id="container">
-            <div id="main-container">
+            <!-- <div id="main-container">
               <div class="relative-container">
                 <div id="main"></div>
               </div>
               <div id="external-link"></div>
-            </div>
+            </div> -->
             <div class="relative-container buttons">
               <div id="buttons">
                 <button data-name="SuperSociety" data-url="http://supersociety.us">SuperSociety</button>
@@ -143,37 +145,42 @@
       };
 
       function handleClick (event) {
-        $("button").removeClass("active");
         event.preventDefault();
+        $("button").removeClass("active");
         var name = $(event.currentTarget).data("name");
         var url = $(event.currentTarget).data("url");
         $(event.currentTarget).addClass("active");
-        $("#main video").remove();
-        $("#main").append($("<video autoplay loop class=\"fadeOut\" src=\"" + name + ".mov\" type=\"video/mov\">"));
+        // $("#main video").remove();
+        // $("#main").append($("<video autoplay loop class=\"fadeOut\" src=\"" + name + ".mov\" type=\"video/mov\">"));
+        $(".screen").show();
+        var $video = $("<video autoplay loop class=\"fadeOut\" src=\"" + name + ".mov\" type=\"video/mov\">");
+        $video.addClass("fadeIn");
+        $("#video-background").html($video);
         $("video").volume = 0.0;
-        if ($("#external-link a").text() !== "") {
-          $("#external-link a").text($(event.currentTarget).data("name"))
-                               .append("<img src=\"external-link-icon-light.png\"></img>")
-                               .attr("href", url);
-        } else {
-          $("#external-link").append($("<a target=\"_blank\">")
-                             .css("z-index", -1)
-                             .text($(event.currentTarget).data("name"))
-                             .append("<img src=\"external-link-icon-light.png\"></img>")
-                             .attr("href", url))
-                             .addClass("slideIn");
-          setTimeout(function () {
-            $("#external-link").css("z-index", 1);
-          }, 1500);
-        };
-        $("#external-link a").on("mouseenter", function () {
-          $("#external-link img").attr("src", "external-link-icon-dark.png");
-        });
-        $("#external-link a").on("mouseleave", function () {
-          $("#external-link img").attr("src", "external-link-icon-light.png");
-        });
+        // if ($("#external-link a").text() !== "") {
+        //   $("#external-link a").text($(event.currentTarget).data("name"))
+        //                        .append("<img src=\"external-link-icon-light.png\"></img>")
+        //                        .attr("href", url);
+        // } else {
+        //   $("#external-link").append($("<a target=\"_blank\">")
+        //                      .css("z-index", -1)
+        //                      .text($(event.currentTarget).data("name"))
+        //                      .append("<img src=\"external-link-icon-light.png\"></img>")
+        //                      .attr("href", url))
+        //                      .addClass("slideIn");
+        //   setTimeout(function () {
+        //     $("#external-link").css("z-index", 1);
+        //   }, 1500);
+        // };
+        // $("#external-link a").on("mouseenter", function () {
+        //   $("#external-link img").attr("src", "external-link-icon-dark.png");
+        // });
+        // $("#external-link a").on("mouseleave", function () {
+        //   $("#external-link img").attr("src", "external-link-icon-light.png");
+        // });
       };
 
+      $(".screen").hide();
       $(".content-inner.resume").hide();
       $("button:not(#resume-button,#main-button)").on("click", handleClick);
       $("#resume-button").on("click", function () {
@@ -181,6 +188,8 @@
         $(".content-inner.resume").addClass("slideScreenUpIn");
         $(".content-inner.resume").show();
         setTimeout(function () {
+          $("#video-background").empty();
+          $(".screen").hide();
           $(".content-inner.main").hide();
           $(".content-inner.main").removeClass("slideScreenUpOut");
           $(".content-inner.resume").removeClass("slideScreenUpIn");
