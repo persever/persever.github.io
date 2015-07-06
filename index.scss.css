@@ -249,6 +249,13 @@ button:focus {
   animation-name: slideScreenUpIn;
 }
 
+.content-inner.main {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
 @-webkit-keyframes slideScreenUpOut {
   0% {
     top: 0%;
