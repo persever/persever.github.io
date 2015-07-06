@@ -22,27 +22,31 @@ button:focus {
 }
 
 #container {
+  margin: auto;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(calc(-50% - 150px), -50%);
+  top: 0;
+  left: 10%;
+  bottom: 0;
+  right: 10%;
 }
 
 #main-container {
+  display: inline-block;
+  position: relative;
+  width: 49%;
+  height: 100%;
+}
+
+#main {
+  overflow: hidden;
+  background-color: black;
+  border-radius: 1000px;
+  /*use a gradient border? make it rotate!*/
+  border: 10px solid #006CD4;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-#main {
-  height: 500px;
-  width: 500px;
-  overflow: hidden;
-  background-color: black;
-  border-radius: 500px;
-  /*use a gradient border? make it rotate!*/
-  border: 10px solid #128BFF;
 }
 
 #main img, #main video {
@@ -86,15 +90,17 @@ button:focus {
 }
 
 #external-link {
+  margin-top: 35px;
   z-index: -1;
-  width: 520px;
+  width: 100%;
   position: absolute;
-  left: 75px;
-  transform: translateY(calc(-50% + 300px));
-  -webkit-transform: translateY(calc(-50% + 300px));
+  /*transform: translateY(calc(-50% + 300px));*/
+  /*-webkit-transform: translateY(calc(-50% + 300px));*/
+}
 
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+.slideIn {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 
@@ -104,19 +110,19 @@ button:focus {
 
 @-webkit-keyframes slideIn {
   0% {
-    top: calc(50% - 200px);
+    top: calc(100% - 300px);
   }
   100% {
-    top: 50%;
+    top: 100%;
   }
 }
 
 @keyframes slideIn {
   0% {
-    top: calc(50% - 200px);
+    top: calc(100% - 300px);
   }
   100% {
-    top: 50%;
+    top: 100%;
   }
 }
 
@@ -131,13 +137,15 @@ button:focus {
 }
 
 #buttons {
+  display: inline-block;
+  /* margin-left: 50px; */
   position: absolute;
-  /*make it size per the #main size!!*/
-  left: calc(250px + 50px);
-  transform: translateY(-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-#buttons button, #buttons a, #external-link a {
+#buttons button, #buttons a, #resume-button, #external-link a {
   display: block;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -151,7 +159,8 @@ button:focus {
   transition: all 0.1s linear;
 }
 
-#buttons button {
+#buttons button, #resume-button {
+  font-weight: 300;
   width: 250px;
   height: 40px;
   /*slight gradient!*/
@@ -162,6 +171,7 @@ button:focus {
 }
 
 #buttons a, #external-link a {
+  font-weight: 400;
   cursor: default;
   text-decoration: none;
   width: 228px;
@@ -172,11 +182,97 @@ button:focus {
   color: #006CD4;
 }
 
-#buttons button:hover, #buttons button.active {
+#buttons button:hover, #resume-button:hover, #buttons button.active {
   background-color: #01386D;
 }
+
+/*#buttons a:hover {
+  background-color: #01386D;
+  border: 2px solid #01386D;
+  color: #f4f8fc;
+  font-weight: 300;
+}*/
 
 #buttons a:hover, #external-link a:hover {
   border: 2px solid #01386D;
   color: #01386D;
+}
+
+.relative-container {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+.relative-container.buttons {
+  width: 40%;
+  margin-left: 50px;
+}
+
+.content-inner {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.content-inner.resume {
+  height: 100%;
+  width: 100%;
+
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideScreenUpIn {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+@keyframes slideScreenUpIn {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+.slideScreenUpIn {
+  -webkit-animation-name: slideScreenUpIn;
+  animation-name: slideScreenUpIn;
+}
+
+@-webkit-keyframes slideScreenUpOut {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: -100%;
+  }
+}
+
+@keyframes slideScreenUpOut {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: -100%;
+  }
+}
+
+.slideScreenUpOut {
+  -webkit-animation-name: slideScreenUpOut;
+  animation-name: slideScreenUpOut;
+}
+
+#resume {
+  height: 100%;
+  width: 100%;
 }

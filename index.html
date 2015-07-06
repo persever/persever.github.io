@@ -12,60 +12,79 @@
     </style>
 
     <!-- DRAW FAVICON TO MATCH MAIN VIEW STYLE <link rel="icon" href="lightbulb.png"> -->
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400'
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300,400'
           rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="index.scss.css"></link>
   </head>
 
   <body>
     <div id="content">
-      <div id="container">
-        <div id="main-container">
-          <div id="main"></div>
+      <div class="content-inner main">
+        <div style="float:left; width: 10%; height: 100%;"></div>
+        <div style="float:left; width: 80%; height: 100%; text-align: center;">
+          <div id="container">
+            <div id="main-container">
+              <div class="relative-container">
+                <div id="main"></div>
+              </div>
+              <div id="external-link"></div>
+            </div>
+            <div class="relative-container buttons">
+              <div id="buttons">
+                <button data-name="SuperSociety" data-url="http://supersociety.us">SuperSociety</button>
+                <button data-name="PixelPipes" data-url="http://persever.github.io/PixelPipes">PixelPipes</button>
+                <button data-name="RailsLite" data-url="http://github.com/persever/RailsLite">RailsLite</button>
+                <a id="gh" href="http://github.com/persever" target="_blank">GitHub</a>
+                <a id="li" href="http://linkedin.com/in/kellywitwickifaddegon" target="_blank">LinkedIn</a>
+                <button id="resume-button">Resume</button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="buttons">
-          <button data-name="SuperSociety" data-url="http://supersociety.us">SuperSociety</button>
-          <button data-name="PixelPipes" data-url="http://persever.github.io/PixelPipes">PixelPipes</button>
-          <button data-name="RailsLite" data-url="http://github.com/persever/RailsLite">RailsLite</button>
-          <a id="gh" href="http://github.com/persever" target="_blank">GitHub</a>
-          <a id="li" href="http://linkedin.com/in/kellywitwickifaddegon" target="_blank">LinkedIn</a>
-          <button id="resume-button">Resume</button>
-        </div>
+        <div  style="float:left; width: 10%; height: 100%;"></div>
       </div>
-      <div id="external-link"></div>
+      <div class="content-inner resume">
+        <div id="resume">RESUME HTML</div>
+      </div>
     </div>
   </body>
 
   <script src="jquery-2.1.4.min.js"></script>
   <script>
     (function () {
+      function resize () {
+        height = 345;
+        $("#container").css("height", height + 20);
+        // $("#container").css("width", height + 300);
+        // $("#main-container").css("width", height + 300);
+        $("#main").css("height", height);
+        $("#main").css("width", height);
+        // $("#buttons").css("transform", "translateY(calc(" + height + "- 50%)");
+      };
+
       function handleClick (event) {
         $("button").removeClass("active");
         event.preventDefault();
         var name = $(event.currentTarget).data("name");
         var url = $(event.currentTarget).data("url");
         $(event.currentTarget).addClass("active");
-        $("#main img").addClass("fadeOut");
-        $("#main video").addClass("fadeOut");
-        $("#main img").remove();
         $("#main video").remove();
-        if (name === "SuperSociety" || "PixelPipes") {
-          $("#main").append($("<video #video autoplay loop src=\"" + name + ".mov\" type=\"video/mov\">"));
-        } else {
-          $("#main").append($("<img>").attr("src", name + ".png"));
-        }
-        if ($("#video")) {
-          $("#video").volume = 0.0;
-        }
-        if ($("#external-link a")[0]) {
+        $("#main").append($("<video autoplay loop class=\"fadeOut\" src=\"" + name + ".mov\" type=\"video/mov\">"));
+        $("video").volume = 0.0;
+        if ($("#external-link a").text() !== "") {
           $("#external-link a").text($(event.currentTarget).data("name"))
                                .append("<img src=\"external-link-icon-light.png\"></img>")
                                .attr("href", url);
         } else {
           $("#external-link").append($("<a target=\"_blank\">")
+                             .css("z-index", -1)
                              .text($(event.currentTarget).data("name"))
                              .append("<img src=\"external-link-icon-light.png\"></img>")
-                             .attr("href", url));
+                             .attr("href", url))
+                             .addClass("slideIn");
+          setTimeout(function () {
+            $("#external-link").css("z-index", 1);
+          }, 1500);
         };
         $("#external-link a").on("mouseenter", function () {
           $("#external-link img").attr("src", "external-link-icon-dark.png");
@@ -75,7 +94,19 @@
         });
       };
 
-      $("button").on("click", handleClick)
+      $(".content-inner.resume").hide();
+      $("button:not(#resume-button)").on("click", handleClick);
+      $("#resume-button").on("click", function () {
+        $(".content-inner.resume").addClass("slideScreenUpIn");
+        $(".content-inner.main").addClass("slideScreenUpOut");
+        debugger
+        $(".content-inner.resume").show();
+        // $(".content-inner.main").hide();
+        // handle reverse! (in click of button on resume view)
+        // but make this work first...
+      });
+      resize();
+      $(window).on("resize", resize);
     })();
   </script>
 
