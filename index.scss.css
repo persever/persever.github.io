@@ -4,13 +4,13 @@
 
 body {
   width: 100%;
-  min-width: 900px;
   height: 100%;
   zoom: 1;
 }
 
 #welcome .text-page-container {
   width: 100%;
+  padding-bottom: 80px;
 }
 
 h1 {
@@ -25,16 +25,27 @@ h2 {
 .subtitle.personal {
   margin-bottom: 20px;
   font-size: 18.4px;
+  font-weight: 300;
+  color: #BAC7E5;
+  background-color: #303E5D;
+  padding: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.sf {
+  font-size: 18.4px;
+  margin: 10px;
   color: #303E5D;
 }
 
 .skills-banner {
+  font-size: 14px;
   background: black;
   position: absolute;
   padding: 5px;
   padding-left: 75px;
   padding-right: 175px;
-  min-width: 900px;
 }
 
 .skill-title {
@@ -48,6 +59,19 @@ h2 {
   float: left;
   color: white;
   text
+}
+
+.skill {
+  font-weight: 300;
+  float: left;
+}
+
+.bar {
+  float: left;
+  margin-left: 8px;
+  margin-right: 8px;
+  font-weight: 600;
+  color: #303E5D;
 }
 
 button:focus {
@@ -135,16 +159,16 @@ button:hover {
 
 a {
   padding-top: 3px;
-  padding-bottom: 3px;
   padding-left: 6px;
   padding-right: 6px;
-  font-weight: 300;
+  font-weight: 600;
+  font-size: 12px;
   cursor: default;
   text-decoration: none;
   height: 18px;
-  background: #9AA4BB;
+  background: #BAC7E5;
   border-radius: 4px;
-  color: white;
+  color: #030C21;
 }
 
 a:hover {

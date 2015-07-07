@@ -31,11 +31,35 @@
         </div>
         <div class="skills-banner p">
           <div class="skill-title">PROGRAMMING SKILLS</div>
-          <div class="skills">Ruby on Rails  |  RSpec  |  SQL  |  JavaScript  |  jQuery  |  Backbone  |  HTML  |  CSS  |  Bootstrap</div>
+          <div class="skills">
+            <div class="skill">Ruby on Rails</div>
+            <div class="bar">|</div>
+            <div class="skill">RSpec</div>
+            <div class="bar">|</div>
+            <div class="skill">SQL</div>
+            <div class="bar">|</div>
+            <div class="skill">JavaScript</div>
+            <div class="bar">|</div>
+            <div class="skill">jQuery</div>
+            <div class="bar">|</div>
+            <div class="skill">Backbone</div>
+            <div class="bar">|</div>
+            <div class="skill">HTML</div>
+            <div class="bar">|</div>
+            <div class="skill">CSS</div>
+            <div class="bar">|</div>
+            <div class="skill">Bootstrap</div>
+          </div>
         </div>
         <div class="skills-banner d">
           <div class="skill-title">DESIGN SKILLS</div>
-          <div class="skills">Photoshop  |  Illustrator  |  InDesign</div>
+          <div class="skills">
+            <div class="skill">Photoshop</div>
+            <div class="bar">|</div>
+            <div class="skill">Illustrator</div>
+            <div class="bar">|</div>
+            <div class="skill">InDesign</div>
+          </div>
         </div>
       </div>
       <div id="SuperSociety" class="section">
@@ -149,8 +173,8 @@
 
       function resize () {
         $(".skills-banner").css("width", $(window).width() + 100)
-        $(".skills-banner.p").css("transform", "rotate(-10deg) translate(-75px, " + $(window).height()/5 + "px)");
-        $(".skills-banner.d").css("transform", "rotate(-10deg) translate(-75px, " + ($(window).height()/5 + 50) + "px)");
+        $(".skills-banner.p").css("transform", "rotate(-10deg) translate(-75px, " + $(window).height()/6 + "px)");
+        $(".skills-banner.d").css("transform", "rotate(-10deg) translate(-75px, " + ($(window).height()/6 + 50) + "px)");
       }
     })();
   </script>
