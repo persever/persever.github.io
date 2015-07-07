@@ -1,6 +1,11 @@
 * {
   font-family: 'Raleway', sans-serif;
   cursor: default;
+
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 body {
@@ -130,11 +135,6 @@ button, a, a:active {
   border: 2px solid white;
   background: rgba(0,0,0,.5);
   color: white;
-
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  transition: all 0.2s linear;
 }
 
 button {
