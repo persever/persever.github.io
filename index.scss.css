@@ -4,19 +4,21 @@
 }
 
 body {
-  width: 100%;
   height: 100%;
+  width: 100%;
+  min-width: 425px;
   zoom: 1;
 }
 
 #welcome .text-page-container {
   width: 100%;
   padding-bottom: 80px;
+  text-align: center;
 }
 
 h1 {
   font-size: 40px;
-  color: black;
+  color: #010101;
 }
 
 h2 {
@@ -26,30 +28,31 @@ h2 {
 .sf {
   font-size: 18.4px;
   margin: 10px;
-  color: #002372;
+  color: #5E5E5E;
 }
 
-.skills-banner {
+.skills-banners {
   font-size: 14px;
-  background: black;
   position: absolute;
-  padding: 5px;
-  padding-left: 75px;
-  padding-right: 70px;
-
+  bottom: 0;
+  transform: rotate(-10deg) translate(-50px,-150px);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.skills-banner.p {
-  bottom: 0;
-  transform: rotate(-10deg) translateY(calc(-100% - 200px));
+.skills-banner {
+  padding: 5px;
+  padding-left: 150px;
+  padding-right: 100px;
+  background: #010101;
+  margin-top: 10px;
+  overflow: auto;
 }
 
-.skills-banner.d {
-  bottom: 0;
-  transform: rotate(-10deg) translateY(calc(-100% - 150px));
+.skills-banner:after {
+  content: "";
+  clear: both;
 }
 
 .skill-title {
@@ -57,25 +60,22 @@ h2 {
   font-weight: 600;
   letter-spacing: .5px;
   color: white;
+  margin-top: 5px;
+  margin-bottom: 5px;
   margin-right: 20px;
 }
 
 .skills {
   float: left;
   color: white;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .skill {
   font-weight: 300;
   float: left;
-}
-
-.bar {
-  float: left;
-  margin-left: 8px;
-  margin-right: 8px;
-  font-weight: 600;
-  color: #002372;
+  margin-right: 20px;
 }
 
 button:focus {
@@ -90,7 +90,7 @@ a {
   z-index: -1;
   height: 100%;
   width: 100%;
-  background: black;
+  background: #010101;
   text-align: center;
   position: relative;
 }
@@ -122,16 +122,6 @@ video {
   color: white;
 }
 
-.text-page-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  text-align: center;
-  color: #002372;
-}
-
 button, a, a:active {
   display: block;
   text-align: center;
@@ -156,7 +146,7 @@ button {
 }
 
 button:hover, a:hover {
-  color: black;
+  color: #010101;
   background: white;
 }
 
@@ -170,11 +160,6 @@ a.github {
   font-size: 14px;
   text-decoration: none;
   height: 24px;
-}
-
-.title {
-  font-size: 20px;
-  margin: 20px;
 }
 
 .subtitle {
@@ -197,4 +182,95 @@ a.github {
   margin-top: 20px;
   margin-bottom: 20px;
   font-weight: 300;
+}
+
+.text-page-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: left;
+  color: #5E5E5E;
+}
+
+.item {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.text-page-container .description li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #5E5E5E;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #010101;
+}
+
+.place {
+  float:left;
+  font-weight: 600;
+}
+
+.date {
+  float: right;
+  font-weight: 600;
+}
+
+#education .title {
+  margin: 0;
+  float: left;
+}
+
+#education .date {
+  float: right;
+  font-weight: 600;
+  height: 24px;
+  padding-top: 4px;
+}
+
+#contact .text-page-container {
+  text-align: center;
+}
+
+#email {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 4px;
+  background: none;
+  color: #5E5E5E;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 280px;
+  height: 20px;
+}
+
+#email:hover {
+  background: #5E5E5E;
+  color: white;
+}
+
+#contact a:not(#email) {
+  background: none;
+  border: none;
+}
+
+#contact a img {
+  height: 60px;
+}
+
+#contact a:hover img {
+  border: none;
+}
+
+#phone {
+  font-size: 16px;
+  margin-bottom: 20px;
 }

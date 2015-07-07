@@ -28,36 +28,29 @@
           <div class="sf">San Francisco Bay Area</div>
           <br>
         </div>
-        <div class="skills-banner p">
-          <div class="skill-title">PROGRAMMING SKILLS</div>
-          <div class="skills">
-            <div class="skill">Ruby on Rails</div>
-            <div class="bar">|</div>
-            <div class="skill">RSpec</div>
-            <div class="bar">|</div>
-            <div class="skill">SQL</div>
-            <div class="bar">|</div>
-            <div class="skill">JavaScript</div>
-            <div class="bar">|</div>
-            <div class="skill">jQuery</div>
-            <div class="bar">|</div>
-            <div class="skill">Backbone</div>
-            <div class="bar">|</div>
-            <div class="skill">HTML</div>
-            <div class="bar">|</div>
-            <div class="skill">CSS</div>
-            <div class="bar">|</div>
-            <div class="skill">Bootstrap</div>
+        <div class="skills-banners">
+          <div class="skills-banner p">
+            <div class="skill-title">PROGRAMMING SKILLS</div>
+            <div class="skills">
+              <div class="skill">Ruby on Rails</div>
+              <div class="skill">RSpec</div>
+              <div class="skill">SQL</div>
+              <div class="skill">JavaScript</div>
+              <div class="skill">jQuery</div>
+              <div class="skill">Backbone</div>
+              <div class="skill">HTML</div>
+              <div class="skill">CSS</div>
+              <div class="skill">Bootstrap</div>
+            </div>
           </div>
-        </div>
-        <div class="skills-banner d">
-          <div class="skill-title">DESIGN SKILLS</div>
-          <div class="skills">
-            <div class="skill">Photoshop</div>
-            <div class="bar">|</div>
-            <div class="skill">Illustrator</div>
-            <div class="bar">|</div>
-            <div class="skill">InDesign</div>
+          <br>
+          <div class="skills-banner d">
+            <div class="skill-title">DESIGN SKILLS</div>
+            <div class="skills">
+              <div class="skill">Photoshop</div>
+              <div class="skill">Illustrator</div>
+              <div class="skill">InDesign</div>
+            </div>
           </div>
         </div>
       </div>
@@ -111,46 +104,60 @@
         <div class="text-page-container">
           <h2>WORK HISTORY</h2>
 
-          <div class="title">Graphic Designer and Co-Organizer</div><div class="place">Direct Action Everywhere</div>
-          <div class="date">2013-2014</div>
-          <ul class="description">
-            <li>Headed visual communications for the international animal advocacy organization.</li>
-            <li>Led the network of several hundred activists as part of the 6-person core organizing team.</li>
-            <li>Designed original campaign materials and mobilized hundreds of supporters.</li>
-            <li>Grew YouTube audience by one million by improving the content strategy.</li>
-          </ul>
+          <div class="item">
+            <div class="title">Graphic Designer and Co-Organizer</div>
+            <div class="place">Direct Action Everywhere</div>
+            <div class="date">2013-2014</div>
+            <br>
+            <ul class="description">
+              <li>Headed visual communications for the international animal advocacy organization.</li>
+              <li>Led the network of several hundred activists as part of the 6-person core organizing team.</li>
+              <li>Designed original campaign materials and mobilized hundreds of supporters.</li>
+              <li>Grew YouTube audience by one million by improving the content strategy.</li>
+            </ul>
+          </div>
 
-          <div class="title">Web Designer</div><div class="place">www.BrynCraigPaintingsMarin.com</div>
-          <div class="date">2010</div>
-          <ul class="description">
-            <li>Site showcasing the artist’s work. Learned HTML/CSS and cPanel to complete the project.</li>
-          </ul>
+          <div class="item">
+            <div class="title">Web Designer</div>
+            <div class="place">www.BrynCraigPaintingsMarin.com</div>
+            <div class="date">2010</div>
+            <br>
+            <ul class="description">
+              <li>Site showcasing the artist&#39;s work. Learned HTML/CSS and cPanel to complete the project.</li>
+            </ul>
+          </div>
         </div>
       </div>
       <div id="education" class="section">
         <div class="text-page-container">
           <h2>EDUCATION</h2>
 
-          <div class="title">App Academy</div>
-          <div class="date">Completed June 2015</div>
-          <ul class="description">
-            <li>Rigorous coding bootcamp with 5% acceptance rate and 15% attrition.</li>
-            <li>Emphasizes best practices and prepares students to write for the full stack.</li>
-          </ul>
+          <div class="item">
+            <div class="title">App Academy</div>
+            <div class="date">Completed June 2015</div>
+            <br>
+            <ul class="description">
+              <li>Rigorous coding bootcamp with 5% acceptance rate and 15% attrition.</li>
+              <li>Emphasizes best practices and prepares students to write for the full stack.</li>
+            </ul>
+          </div>
 
-          <div class="title">University of Toronto  |  HBA Art History</div>
-          <div class="date">2013</div>
-          <ul class="description">
-            <li>Studies emphasized advertising and other areas of contemporary visual design.</li>
-          </ul>
+          <div class="item">
+            <div class="title">University of Toronto  |  HBA Art History</div>
+            <div class="date">2013</div>
+            <br>
+            <ul class="description">
+              <li>Studies emphasized advertising and other areas of contemporary visual design.</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div id="footer" class="section">
+      <div id="contact" class="section">
         <div class="text-page-container">
           <div id="phone">(510) 703-8436</div>
           <a id="email" href="mailto:kelly.witwickifaddegon@gmail.com">kelly.witwickifaddegon@gmail.com</a>
-          <a id="github" href="http://github.com/persever" target="_blank">GitHub</a>
-          <a id="linkedin" href="http://linkedin.com/in/kellywitwickifaddegon" target="_blank">LinkedIn</a>
+          <a id="github" href="http://github.com/persever" target="_blank"><img src="githubicon.png"></img></a>
+          <a id="linkedin" href="http://linkedin.com/in/kellywitwickifaddegon" target="_blank"><img src="linkedinicon.png"></img></a>
         </div>
       </div>
     </div>
@@ -162,10 +169,24 @@
       $("video").volume = 0.0;
       $("#fullpage").fullpage();
       resize();
+
       $(window).on("resize", resize);
 
+      $("#github img").on("mouseenter", function () {
+        $("#github img").attr("src", "githubicon-hover.png");
+      });
+      $("#linkedin img").on("mouseenter", function () {
+        $("#linkedin img").attr("src", "linkedinicon-hover.png");
+      });
+      $("#github img").on("mouseleave", function () {
+        $("#github img").attr("src", "githubicon.png");
+      });
+      $("#linkedin img").on("mouseleave", function () {
+        $("#linkedin img").attr("src", "linkedinicon.png");
+      });
+
       function resize () {
-        $(".skills-banner").css("width", $(window).width() + 100);
+        $(".skills-banners").css("width", $(window).width() + 100);
       }
     })();
   </script>
