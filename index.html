@@ -25,7 +25,6 @@
       <div id="welcome" class="section">
         <div class="text-page-container">
           <h1>KELLY WITWICKI FADDEGON</h1>
-          <div class="subtitle personal">Web Developer Seeking an Opportunity with an Innovative Team</div>
           <div class="sf">San Francisco Bay Area</div>
           <br>
         </div>
@@ -69,15 +68,13 @@
         <div class="screen"></div>
         <div class="inner-container">
           <button data-name="SuperSociety" data-url="http://supersociety.us">SuperSociety</button>
-          <div class="sub-container">
-            <div class="subtitle">Meetup for Superheroes</div>
-            <a class="github" href="http://github.com/persever/supersociety">GitHub</a>
-          </div>
-           <div class="description">
-             Original UI design, with sliding index items and toggle buttons that react to mouse hovers.
-             Overrides Backbone's parse methods to retrieve associated models with custom queries.
-             Sensitive search functionality listens for searchbar keydown and responds automatically.
-          </div>
+          <div class="subtitle">Meetup for Superheroes</div>
+          <ul class="description">
+            <li>Original UI design.</li>
+            <li>Overrides Backbone's parse methods to retrieve associated models with custom queries.</li>
+            <li>Sensitive search functionality listens for searchbar keydown and responds automatically.</li>
+          </ul>
+          <a class="github" href="http://github.com/persever/supersociety">GitHub</a>
         </div>
       </div>
       <div id="PixelPipes" class="section">
@@ -87,14 +84,12 @@
         <div class="screen"></div>
         <div class="inner-container">
           <button data-name="PixelPipes" data-url="http://persever.github.io/PixelPipes">PixelPipes</button>
-          <div class="sub-container">
-            <div class="subtitle">Logic Puzzle Game</div>
-            <a class="github" href="http://github.com/persever/pixelpipes">GitHub</a>
-          </div>
-           <div class="description">
-             JQuery calculations responsively resize the board.
-             Assesses pipe connections by recursively checking adjacent positions for matching tiles.
-          </div>
+          <div class="subtitle">Logic Puzzle Game</div>
+          <ul class="description">
+            <li>JQuery calculations responsively resize the board.</li>
+            <li>Assesses pipe connections by recursively checking adjacent positions for matching tiles.</li>
+          </ul>
+          <a class="github" href="http://github.com/persever/pixelpipes">GitHub</a>
         </div>
       </div>
       <div id="RailsLite" class="section">
@@ -104,14 +99,12 @@
         <div class="screen"></div>
         <div class="inner-container">
           <button data-name="RailsLite" data-url="http://github.com/persever/RailsLite">RailsLite</button>
-          <div class="sub-container">
-            <div class="subtitle">MVC Framework Based on Rails</div>
-            <a class="github" href="http://github.com/persever/railslite">GitHub</a>
-          </div>
-           <div class="description">
-             Enables creation of controllers, renders templates, stores session cookies, and parses params.
-             Instantiates a router to match routes with regular expressions and invoke the requested action.
-          </div>
+          <div class="subtitle">MVC Framework Based on Rails</div>
+          <ul class="description">
+            <li>Enables creation of controllers, renders templates, stores session cookies, and parses params.</li>
+            <li>Instantiates a router to match routes with regular expressions and invoke the requested action.</li>
+          </ul>
+          <a class="github" href="http://github.com/persever/railslite">GitHub</a>
         </div>
       </div>
       <div id="work-history" class="section">
@@ -120,18 +113,18 @@
 
           <div class="title">Graphic Designer and Co-Organizer</div><div class="place">Direct Action Everywhere</div>
           <div class="date">2013-2014</div>
-          <div class="description">
-            Headed visual communications for the international animal advocacy organization.
-            Led the network of several hundred activists as part of the 6-person core organizing team.
-            Designed original campaign materials and mobilized hundreds of supporters.
-            Grew YouTube audience by one million by improving the content strategy.
-          </div>
+          <ul class="description">
+            <li>Headed visual communications for the international animal advocacy organization.</li>
+            <li>Led the network of several hundred activists as part of the 6-person core organizing team.</li>
+            <li>Designed original campaign materials and mobilized hundreds of supporters.</li>
+            <li>Grew YouTube audience by one million by improving the content strategy.</li>
+          </ul>
 
           <div class="title">Web Designer</div><div class="place">www.BrynCraigPaintingsMarin.com</div>
           <div class="date">2010</div>
-          <div class="description">
-            Site showcasing the artist’s work. Learned HTML/CSS and cPanel to complete the project.
-          </div>
+          <ul class="description">
+            <li>Site showcasing the artist’s work. Learned HTML/CSS and cPanel to complete the project.</li>
+          </ul>
         </div>
       </div>
       <div id="education" class="section">
@@ -140,16 +133,16 @@
 
           <div class="title">App Academy</div>
           <div class="date">Completed June 2015</div>
-          <div class="description">
-            Rigorous coding bootcamp with 5% acceptance rate and 15% attrition.
-            Emphasizes best practices and prepares students to write for the full stack.
-          </div>
+          <ul class="description">
+            <li>Rigorous coding bootcamp with 5% acceptance rate and 15% attrition.</li>
+            <li>Emphasizes best practices and prepares students to write for the full stack.</li>
+          </ul>
 
           <div class="title">University of Toronto  |  HBA Art History</div>
           <div class="date">2013</div>
-          <div class="description">
-            Studies emphasized advertising and other areas of contemporary visual design.
-          </div>
+          <ul class="description">
+            <li>Studies emphasized advertising and other areas of contemporary visual design.</li>
+          </ul>
         </div>
       </div>
       <div id="footer" class="section">
@@ -172,9 +165,7 @@
       $(window).on("resize", resize);
 
       function resize () {
-        $(".skills-banner").css("width", $(window).width() + 100)
-        $(".skills-banner.p").css("transform", "rotate(-10deg) translate(-75px, " + $(window).height()/6 + "px)");
-        $(".skills-banner.d").css("transform", "rotate(-10deg) translate(-75px, " + ($(window).height()/6 + 50) + "px)");
+        $(".skills-banner").css("width", $(window).width() + 100);
       }
     })();
   </script>

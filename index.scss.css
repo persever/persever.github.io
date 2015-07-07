@@ -1,5 +1,6 @@
 * {
   font-family: 'Raleway', sans-serif;
+  cursor: default;
 }
 
 body {
@@ -22,21 +23,10 @@ h2 {
   font-size: 30px !important;
 }
 
-.subtitle.personal {
-  margin-bottom: 20px;
-  font-size: 18.4px;
-  font-weight: 300;
-  color: #BAC7E5;
-  background-color: #303E5D;
-  padding: 10px;
-  padding-left: 100px;
-  padding-right: 100px;
-}
-
 .sf {
   font-size: 18.4px;
   margin: 10px;
-  color: #303E5D;
+  color: #002372;
 }
 
 .skills-banner {
@@ -45,12 +35,27 @@ h2 {
   position: absolute;
   padding: 5px;
   padding-left: 75px;
-  padding-right: 175px;
+  padding-right: 70px;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.skills-banner.p {
+  bottom: 0;
+  transform: rotate(-10deg) translateY(calc(-100% - 200px));
+}
+
+.skills-banner.d {
+  bottom: 0;
+  transform: rotate(-10deg) translateY(calc(-100% - 150px));
 }
 
 .skill-title {
   float: left;
   font-weight: 600;
+  letter-spacing: .5px;
   color: white;
   margin-right: 20px;
 }
@@ -58,7 +63,6 @@ h2 {
 .skills {
   float: left;
   color: white;
-  text
 }
 
 .skill {
@@ -71,7 +75,7 @@ h2 {
   margin-left: 8px;
   margin-right: 8px;
   font-weight: 600;
-  color: #303E5D;
+  color: #002372;
 }
 
 button:focus {
@@ -106,7 +110,7 @@ video {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(0,0,0,.8);
 }
 
 .inner-container {
@@ -115,7 +119,6 @@ video {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  text-align: center;
   color: white;
 }
 
@@ -126,70 +129,47 @@ video {
   transform: translate(-50%, -50%);
   z-index: 2;
   text-align: center;
-  color: #030C21;
+  color: #002372;
 }
 
-button, a {
+button, a, a:active {
   display: block;
-  margin: 0 auto;
   text-align: center;
   font-size: 16px;
+  border-radius: 4px;
+  border: 2px solid white;
+  background: rgba(0,0,0,.5);
+  color: white;
 
-  -webkit-transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  -o-transition: all 0.1s linear;
-  transition: all 0.1s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 button {
-  padding: 9px;
-  font-weight: 400;
-  color: #030C21;
-  width: 250px;
-  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 30px;
+  width: 280px;
+  height: 70px;
+}
+
+button:hover, a:hover {
+  color: black;
   background: white;
-  border: none;
-  border-radius: 4px;
-}
-
-button:hover {
-  color: white;
-  background: #030C21;
-}
-
-a {
-  padding-top: 3px;
-  padding-left: 6px;
-  padding-right: 6px;
-  font-weight: 600;
-  font-size: 12px;
-  cursor: default;
-  text-decoration: none;
-  height: 18px;
-  background: #BAC7E5;
-  border-radius: 4px;
-  color: #030C21;
-}
-
-a:hover {
-  background: #030C21;
-}
-
-.sub-container {
-  width: 100%;
-  overflow: auto;
-  text-align: center;
-  margin: 20px;
-}
-
-.sub-container:after {
-  content: "";
-  clear: both;
 }
 
 a.github {
-  margin-left: 20px;
   display: inline-block;
+  cursor: default;
+  padding-top: 6px;
+  padding-left: 9px;
+  padding-right: 9px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  height: 24px;
 }
 
 .title {
@@ -199,8 +179,22 @@ a.github {
 
 .subtitle {
   display: inline-block;
+  font-weight: 600;
+  letter-spacing: .5px;
 }
 
 .description {
+  padding: 0;
   display: block;
+  text-align: left;
+  color: white;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.description li {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 300;
 }
