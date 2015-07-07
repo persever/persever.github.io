@@ -2,154 +2,112 @@
   font-family: 'Raleway', sans-serif;
 }
 
+body {
+  width: 100%;
+  min-width: 900px;
+  height: 100%;
+  zoom: 1;
+}
+
+#welcome .text-page-container {
+  width: 100%;
+}
+
+h1 {
+  font-size: 40px;
+  color: black;
+}
+
+h2 {
+  font-size: 30px !important;
+}
+
+.subtitle.personal {
+  margin-bottom: 20px;
+  font-size: 18.4px;
+  color: #303E5D;
+}
+
+.skills-banner {
+  background: black;
+  position: absolute;
+  padding: 5px;
+  padding-left: 75px;
+  padding-right: 175px;
+  min-width: 900px;
+}
+
+.skill-title {
+  float: left;
+  font-weight: 600;
+  color: white;
+  margin-right: 20px;
+}
+
+.skills {
+  float: left;
+  color: white;
+  text
+}
+
 button:focus {
   outline:0;
 }
 
-#content {
-  position: fixed;
-  /*is there a white space on the right side?*/
+a {
+  text-decoration: none;
+}
+
+.video-background {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background: black;
+  text-align: center;
+  position: relative;
+}
+
+video {
+  z-index: 0;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.screen {
+  z-index: 1;
+  position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  background: black;
+  background-color: rgba(0,0,0,.7);
 }
 
-#container::after, #main-container::after {
-  content: "";
-  clear: both;
-}
-
-#container {
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 10%;
-  bottom: 0;
-  right: 10%;
-}
-
-#main-container {
-  display: inline-block;
-  position: relative;
-  width: 49%;
-  height: 100%;
-}
-
-#main {
-  overflow: hidden;
-  background-color: black;
-  border-radius: 1000px;
-  /*use a gradient border? make it rotate!*/
-  border: 10px solid #006CD4;
+.inner-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  color: white;
 }
 
-#main img, #main video {
-  height: 100%;
-  width: 100%;
-  /*match main!*/
-  border-radius: 500px;
-  overflow: hidden;
-
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-}
-
-@-webkit-keyframes fadeOut {
-  0% {opacity: 1;}
-  100% {opacity: 0;}
-}
-
-@keyframes fadeOut {
-  0% {opacity: 1;}
-  100% {opacity: 0;}
-}
-
-.fadeOut {
-  -webkit-animation-name: fadeOut;
-  animation-name: fadeOut;
-}
-
-#external-link {
-  margin-top: 35px;
-  z-index: -1;
-  width: 100%;
-  position: absolute;
-  /*transform: translateY(calc(-50% + 300px));*/
-  /*-webkit-transform: translateY(calc(-50% + 300px));*/
-}
-
-.slideIn {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-
-  -webkit-animation-name: slideIn;
-  animation-name: slideIn;
-}
-
-@-webkit-keyframes slideIn {
-  0% {
-    top: calc(100% - 300px);
-  }
-  100% {
-    top: 100%;
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    top: calc(100% - 300px);
-  }
-  100% {
-    top: 100%;
-  }
-}
-
-#external-link a {
-  margin: 0 auto;
-}
-
-#external-link img {
-  height: 12px;
-  width: 12px;
-  margin-left: 10px;
-}
-
-#buttons {
-  display: inline-block;
-  /* margin-left: 50px; */
+.text-page-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  color: #030C21;
 }
 
-#buttons button, #buttons a, #resume-button, #main-button, #external-link a {
+button, a {
   display: block;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  padding: 9px;
+  margin: 0 auto;
   text-align: center;
   font-size: 16px;
 
@@ -159,265 +117,66 @@ button:focus {
   transition: all 0.1s linear;
 }
 
-#resume-button, #main-button {
-  font-weight: 300;
-  color: white !important;
-}
-
-#buttons button:not(#resume-button) {
+button {
+  padding: 9px;
   font-weight: 400;
+  color: #030C21;
   width: 250px;
   height: 40px;
   background: white;
   border: none;
   border-radius: 4px;
-  color: #708090;
 }
 
-#buttons a, #external-link a {
+button:hover {
+  color: white;
+  background: #030C21;
+}
+
+a {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
   font-weight: 300;
   cursor: default;
   text-decoration: none;
-  width: 228px;
   height: 18px;
-  background: #708090;
-  border: 2px solid white;
+  background: #9AA4BB;
   border-radius: 4px;
   color: white;
 }
 
-#buttons button:not(#resume-button):hover, #buttons button.active {
-  background-color: #708090;
-  color: white;
-  font-weight: 300;
+a:hover {
+  background: #030C21;
 }
 
-#resume-button, #main-button {
-  font-weight: 400;
-  width: 250px;
-  height: 40px;
-  background: none;
-  border: none;
-  color: white;
+.sub-container {
+  width: 100%;
+  overflow: auto;
+  text-align: center;
+  margin: 20px;
 }
 
-#main-button {
-  margin: 0 auto;
+.sub-container:after {
+  content: "";
+  clear: both;
 }
 
-#resume-button:hover, #main-button:hover {
-  color: #708090 !important;
-}
-
-/* color border and arrow too! */
-
-#buttons a:hover, #external-link a:hover {
-  color: #708090;
-  border: 2px solid #708090;
-  background: white;
-}
-
-.relative-container {
-  position: relative;
+a.github {
+  margin-left: 20px;
   display: inline-block;
-  height: 100%;
-  width: 100%;
 }
 
-.relative-container.buttons {
-  width: 40%;
-  /*margin-left: 50px;*/
-}
-
-.content-inner {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-}
-
-.content-inner.resume {
-  height: 100%;
-  width: 100%;
-
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-
-.content-inner.main {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-
-
-
-
-
-@-webkit-keyframes slideScreenUpIn {
-  0% {
-    top: 100%;
-  }
-  100% {
-    top: 0%;
-  }
-}
-
-@keyframes slideScreenUpIn {
-  0% {
-    top: 100%;
-  }
-  100% {
-    top: 0%;
-  }
-}
-
-.slideScreenUpIn {
-  -webkit-animation-name: slideScreenUpIn;
-  animation-name: slideScreenUpIn;
-}
-
-@-webkit-keyframes slideScreenUpOut {
-  0% {
-    top: 0%;
-  }
-  100% {
-    top: -100%;
-  }
-}
-
-@keyframes slideScreenUpOut {
-  0% {
-    top: 0%;
-  }
-  100% {
-    top: -100%;
-  }
-}
-
-.slideScreenUpOut {
-  -webkit-animation-name: slideScreenUpOut;
-  animation-name: slideScreenUpOut;
-}
-
-
-@-webkit-keyframes slideScreenDownIn {
-  0% {
-    top: -100%;
-  }
-  100% {
-    top: 0%;
-  }
-}
-
-@keyframes slideScreenDownIn {
-  0% {
-    top: -100%;
-  }
-  100% {
-    top: 0%;
-  }
-}
-
-.slideScreenDownIn {
-  -webkit-animation-name: slideScreenDownIn;
-  animation-name: slideScreenDownIn;
-}
-
-@-webkit-keyframes slideScreenDownOut {
-  0% {
-    top: 0%;
-  }
-  100% {
-    top: 100%;
-  }
-}
-
-@keyframes slideScreenDownOut {
-  0% {
-    top: 0%;
-  }
-  100% {
-    top: 100%;
-  }
-}
-
-.slideScreenDownOut {
-  -webkit-animation-name: slideScreenDownOut;
-  animation-name: slideScreenDownOut;
-}
-
-
-
-
-
-
-
-#resume {
-  height: 100%;
-  width: 100%;
-  overflow: scroll;
-  padding-top: 41px;
-}
-
-#resume-content {
-  width: calc(100% - 100px);
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 10px;
-  padding-bottom: 80px;
-  overflow: scroll;
-  font-size: 14px;
-  line-height: 1.25;
-  color: white;
-}
-
-h2 {
+.title {
   font-size: 20px;
-  font-weight: 600;
+  margin: 20px;
 }
 
-
-
-
-
-
-.screen {
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: rgba(0,0,0,.7);
-
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
+.subtitle {
+  display: inline-block;
 }
 
-#video-background {
-  z-index: -2;
-  z-index: -2;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#video-background video {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
+.description {
+  display: block;
 }
