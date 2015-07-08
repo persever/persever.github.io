@@ -173,6 +173,11 @@
 
       $(window).on("resize", resize);
 
+      $(".inner-container button").on("click", function () {
+        var url = $(event.currentTarget).data("url");
+        window.location = url;
+      });
+
       $("#github img").on("mouseenter", function () {
         $("#github img").attr("src", "githubicon-hover.png");
       });
