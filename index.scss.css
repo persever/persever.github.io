@@ -95,7 +95,7 @@ a {
   z-index: -1;
   height: 100%;
   width: 100%;
-  background: #010101;
+  background: black;
   text-align: center;
   position: relative;
 }
