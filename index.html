@@ -54,9 +54,8 @@
           </div>
         </div>
       </div>
-      <div id="SuperSociety" class="section">
+      <div id="SuperSociety" class="main section">
         <div class="video-background">
-          <video autoplay loop src="videos/SuperSociety.mov" type="video/mov">
         </div>
         <div class="screen"></div>
         <div class="inner-container">
@@ -70,9 +69,8 @@
           <a class="github" href="http://github.com/persever/supersociety">GitHub</a>
         </div>
       </div>
-      <div id="PixelPipes" class="section">
+      <div id="PixelPipes" class="main section">
         <div class="video-background">
-          <video autoplay loop src="videos/PixelPipes.mov" type="video/mov">
         </div>
         <div class="screen"></div>
         <div class="inner-container">
@@ -85,9 +83,8 @@
           <a class="github" href="http://github.com/persever/pixelpipes">GitHub</a>
         </div>
       </div>
-      <div id="RailsLite" class="section">
+      <div id="RailsLite" class="main section">
         <div class="video-background">
-          <video autoplay loop src="videos/RailsLite.mov" type="video/mov">
         </div>
         <div class="screen"></div>
         <div class="inner-container">
@@ -171,7 +168,16 @@
       $("#fullpage").fullpage();
       resize();
 
-      $(window).on("resize", resize);
+      if (window.matchMedia("(min-device-width: 1200px)").matches) {
+        $(".main").each(function(idx, el) {
+          $(el).find(".video-background").append($("<video autoplay loop src=\"videos/" + $(el).attr("id") + ".mov\" type=\"video/mov\">"));
+        });
+      } else {
+        $(".main").each(function(idx, el) {
+          $(el).find(".video-background").append($("<img src=\"images/" + $(el).attr("id") + ".png\">"));
+        });
+      }
+
 
       $("#github img").on("mouseenter", function () {
         $("#github img").attr("src", "images/githubicon-hover.png");
@@ -191,6 +197,8 @@
       // $("#ea img").on("mouseleave", function () {
       //   $("#ea img").attr("src", "images/eaicon.png");
       // });
+
+      $(window).on("resize", resize);
 
       function resize () {
         $(".skills-banners").css("width", $(window).width() + 100);

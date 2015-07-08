@@ -39,6 +39,7 @@ h2 {
   font-size: 16px;
   position: absolute;
   bottom: 0;
+  -webkit-transform: rotate(-10deg) translate(-40px,-200px);
   transform: rotate(-10deg) translate(-40px,-200px);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -86,10 +87,6 @@ button:focus {
   outline:0;
 }
 
-a {
-  text-decoration: none;
-}
-
 .video-background {
   z-index: -1;
   height: 100%;
@@ -99,11 +96,12 @@ a {
   position: relative;
 }
 
-video {
+video, .video-background img {
   z-index: 0;
   height: 100%;
   position: absolute;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
@@ -121,12 +119,14 @@ video {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 2;
   color: white;
 }
 
 a, a:active {
+  text-decoration: none;
   display: block;
   text-align: center;
   font-size: 16px;
@@ -192,6 +192,7 @@ a.github {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 2;
   text-align: left;
