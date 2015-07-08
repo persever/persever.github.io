@@ -260,6 +260,14 @@ a.github {
 #contact a:not(#email) {
   background: none;
   border: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+#contact a#ea {
+  display: block;
 }
 
 #contact a img {
