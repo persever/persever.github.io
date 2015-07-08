@@ -268,12 +268,12 @@ a.github {
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 20px;
-  display: inline-block;
+  /*display: inline-block;*/
 }
 
-#contact a#ea {
+/*#contact a#ea {
   display: block;
-}
+}*/
 
 #contact a img {
   height: 60px;
