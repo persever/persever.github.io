@@ -11,7 +11,6 @@
 body {
   height: 100%;
   width: 100%;
-  min-width: 425px;
   zoom: 1;
 }
 
@@ -40,7 +39,7 @@ h2 {
   font-size: 16px;
   position: absolute;
   bottom: 0;
-  transform: rotate(-10deg) translate(-50px,-200px);
+  transform: rotate(-10deg) translate(-40px,-200px);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
