@@ -37,7 +37,7 @@ h2 {
 }
 
 .skills-banners {
-  font-size: 14px;
+  font-size: 16px;
   position: absolute;
   bottom: 0;
   transform: rotate(-10deg) translate(-50px,-200px);
