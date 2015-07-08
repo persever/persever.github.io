@@ -127,7 +127,7 @@ video {
   color: white;
 }
 
-button, a, a:active {
+a, a:active {
   display: block;
   text-align: center;
   font-size: 16px;
@@ -137,15 +137,20 @@ button, a, a:active {
   color: white;
 }
 
-button {
+.main-link {
   margin-bottom: 20px;
   padding: 10px;
+  padding-top: 15px;
   font-size: 30px;
   width: 280px;
-  height: 70px;
+  height: 40px;
 }
 
-button:hover, a:hover {
+.main-link:hover {
+  font-size: 30px;
+}
+
+a:hover {
   color: #010101;
   background: white;
 }

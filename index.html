@@ -60,7 +60,7 @@
         </div>
         <div class="screen"></div>
         <div class="inner-container">
-          <button data-name="SuperSociety" data-url="http://supersociety.us">SuperSociety</button>
+          <a class="main-link" href="http://supersociety.us">SuperSociety</a>
           <div class="subtitle">Meetup for Superheroes</div>
           <ul class="description">
             <li>Original UI design.</li>
@@ -76,7 +76,7 @@
         </div>
         <div class="screen"></div>
         <div class="inner-container">
-          <button data-name="PixelPipes" data-url="http://persever.github.io/PixelPipes">PixelPipes</button>
+          <a class="main-link" href="http://persever.github.io/PixelPipes">PixelPipes</a>
           <div class="subtitle">Logic Puzzle Game</div>
           <ul class="description">
             <li>jQuery calculations responsively resize the board.</li>
@@ -91,7 +91,7 @@
         </div>
         <div class="screen"></div>
         <div class="inner-container">
-          <button data-name="RailsLite" data-url="http://github.com/persever/RailsLite">RailsLite</button>
+          <a class="main-link" href="http://github.com/persever/RailsLite">RailsLite</a>
           <div class="subtitle">MVC Framework Based on Rails</div>
           <ul class="description">
             <li>Enables creation of controllers, renders templates, stores session cookies, and parses params.</li>
@@ -172,11 +172,6 @@
       resize();
 
       $(window).on("resize", resize);
-
-      $(".inner-container button").on("click", function () {
-        var url = $(event.currentTarget).data("url");
-        window.location = url;
-      });
 
       $("#github img").on("mouseenter", function () {
         $("#github img").attr("src", "githubicon-hover.png");
