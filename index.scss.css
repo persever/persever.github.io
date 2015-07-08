@@ -40,7 +40,7 @@ h2 {
   font-size: 14px;
   position: absolute;
   bottom: 0;
-  transform: rotate(-10deg) translate(-50px,-150px);
+  transform: rotate(-10deg) translate(-50px,-200px);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
