@@ -146,6 +146,11 @@ a, a:active {
   border: 2px solid white;
   background: rgba(0,0,0,.5);
   color: white;
+  cursor: pointer;
+}
+
+a img {
+  cursor: inherit;
 }
 
 .main-link {
@@ -168,7 +173,6 @@ a:hover {
 
 a.github {
   display: inline-block;
-  cursor: default;
   padding-top: 6px;
   padding-left: 9px;
   padding-right: 9px;
