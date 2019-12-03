@@ -172,6 +172,11 @@ header.masthead .intro-text .intro-heading {
 section.bg-light {
   background-color: #e9ecef !important;
 }
+#google .wink-icon svg {
+  color: #940946;
+  height: 16px;
+}
+
 .portfolio .row {
   justify-content: center;
 }
