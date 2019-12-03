@@ -267,6 +267,13 @@ ul.timeline li:last-of-type .timeline-image {
   font-weight: 400;
 }
 
+footer ul.social-buttons li a {
+  background-color: #fff;
+}
+footer ul.social-buttons svg {
+  color: #580027;
+  height: 100%;
+}
 
 @media (min-width: 992px) {
   #mainNav {
