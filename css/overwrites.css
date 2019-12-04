@@ -171,6 +171,10 @@ header.masthead .intro-text .intro-heading {
   text-align: left;
   color: #fff;
 }
+#sentienceinstitute .page-section-description .section-subheading span:not(:first-of-type) {
+  display: block;
+  margin-top: 5px;
+}
 
 .in-text-icon {
   height: 1em;
@@ -238,6 +242,9 @@ section#contact::before {
 .timeline>li {
   min-height: unset;
   margin-bottom: 25px;
+}
+.timeline .timeline-heading {
+  word-break: break-word;
 }
 .timeline .timeline-heading h4 {
   color: #580027;
