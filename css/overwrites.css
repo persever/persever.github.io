@@ -20,7 +20,7 @@
 #mainNav .navbar-brand:focus {
   color: #fff;
   line-height: 24px;
-  transition: color .3s, font-size .3s;
+  transition: color .3s, font-size .6s;
 }
 
 #mainNav .navbar-brand:hover {
