@@ -171,8 +171,8 @@ header.masthead .intro-text .intro-heading {
   text-align: left;
   color: #fff;
 }
-.in-text-icon {
-  height: 1em;
+#sentienceinstitute .section-heading svg {
+  fill: #fff;
 }
 
 #google .wink-icon svg {
