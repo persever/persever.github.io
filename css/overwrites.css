@@ -278,12 +278,21 @@ ul.timeline li:last-of-type .timeline-image {
   font-weight: 400;
 }
 
-footer ul.social-buttons li a {
-  background-color: #fff;
+footer ul.social-buttons li a,
+footer ul.social-buttons li a:hover
+footer ul.social-buttons li a:active
+footer ul.social-buttons li a:focus {
+  background-color: #fff !important;
 }
 footer ul.social-buttons svg {
-  color: #580027;
+  color: #940946;
   height: 100%;
+  transition: color .3s;
+}
+footer ul.social-buttons li a:hover svg,
+footer ul.social-buttons li a:active svg,
+footer ul.social-buttons li a:focus svg {
+  color: #580027;
 }
 
 @media (min-width: 992px) {
