@@ -10,24 +10,30 @@
 }
 
 #mainNav {
-  /* transition: padding-top .2s, padding-bottom .2s; */
+  transition: padding-top .6s, padding-bottom .6s;
   background-color: #580027;
 }
 
 #mainNav .navbar-brand,
 #mainNav .navbar-brand:active,
-#mainNav .navbar-brand.active {
+#mainNav .navbar-brand.active,
+#mainNav .navbar-brand:focus {
   color: #fff;
-  transition: background-color .3s;
-}
-#mainNav .navbar-brand:hover {
-  color: #DB9FBA;
+  line-height: 24px;
+  transition: color .3s, font-size .3s;
 }
 
+#mainNav .navbar-brand:hover {
+  color: #940946;
+}
+
+#mainNav .navbar-toggler {
+  background-color: #580027;
+}
 #mainNav .navbar-toggler:hover,
 #mainNav .navbar-toggler:active,
 #mainNav .navbar-toggler:focus {
-  background-color: #DB9FBA;
+  background-color: #940946;
   transition: background-color .3s;
 }
 nav svg.menu-icon {
