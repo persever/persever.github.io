@@ -225,8 +225,6 @@ section#contact::before {
   background-image: url('../img/speaking.jpeg');
   background-size: cover;
   background-position: center;
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
 }
 #contact .container {
   position: relative;
