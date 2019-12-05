@@ -205,7 +205,15 @@ header.masthead .intro-text .intro-heading {
 
 .hover-text {
   cursor: pointer;
+  color: unset;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #580027;
 }
+.hover-text:hover {
+  text-decoration: none;
+}
+
 #google .wink-icon svg {
   color: #940946;
   height: 16px;
