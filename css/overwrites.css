@@ -69,15 +69,26 @@ h2.btn.btn-primary, h2.btn.btn-primary a {
   color: #940946 !important;
 }
 
-#mainNav .navbar-toggler {
-  background-color: #3E001B;
-}
-#mainNav .navbar-toggler:hover,
-#mainNav .navbar-toggler:active,
-#mainNav .navbar-toggler:focus {
+#mainNav .navbar-toggler,
+#mainNav.navbar-shrink .navbar-toggler[aria-expanded='true'],
+#mainNav.navbar-shrink .navbar-toggler:hover,
+#mainNav.navbar-shrink .navbar-toggler:active,
+#mainNav.navbar-shrink .navbar-toggler:focus
+{
   background-color: #940946;
   transition: background-color .3s;
 }
+#mainNav.navbar-shrink .navbar-toggler[aria-expanded="false"],
+#mainNav:not(.navbar-shrink) .navbar-toggler:hover,
+#mainNav:not(.navbar-shrink) .navbar-toggler:active,
+#mainNav:not(.navbar-shrink) .navbar-toggler:focus
+{
+  background-color: #3E001B;
+}
+#mainNav:not(.navbar-shrink) .navbar-toggler[aria-expanded='false'] {
+  background-color: #940946;
+}
+
 
 nav svg.menu-icon {
   fill: #fff;
@@ -208,15 +219,15 @@ header.masthead .intro-text .intro-heading {
   color: unset;
   text-decoration: underline;
   text-decoration-style: dotted;
-  text-decoration-color: #580027;
+  text-decoration-color: #DB9FBA;
 }
 .hover-text:hover {
   text-decoration: none;
 }
-
 #google .wink-icon svg {
   color: #940946;
   height: 16px;
+  width: 16px;
 }
 
 section.bg-light {
