@@ -36,8 +36,11 @@ h2.btn.btn-primary, h2.btn.btn-primary a {
 } */
 
 #mainNav {
-  transition: padding-top .6s, padding-bottom .6s;
-  background-color: #3E001B;
+  transition: padding-top .3s, padding-bottom .3s, background-color .3s;
+  background-color: rgba(62,0,27,0);
+}
+#mainNav.navbar-shrink {
+  background-color: rgba(62,0,27,1);
 }
 
 #mainNav .navbar-brand,
@@ -49,8 +52,21 @@ h2.btn.btn-primary, h2.btn.btn-primary a {
   transition: color .3s, font-size .6s;
 }
 
-#mainNav .navbar-brand:hover {
-  color: #940946;
+#mainNav .nav-link {
+  transition: color .3s;
+}
+
+#mainNav .navbar-brand:hover,
+#mainNav .nav-link:hover,
+#mainNav .nav-link:active,
+#mainNav .nav-link:focus {
+  color: #3E001B !important;
+}
+#mainNav.navbar-shrink .navbar-brand:hover,
+#mainNav.navbar-shrink .nav-link:hover,
+#mainNav.navbar-shrink .nav-link:active,
+#mainNav.navbar-shrink .nav-link:focus {
+  color: #940946 !important;
 }
 
 #mainNav .navbar-toggler {
@@ -62,6 +78,7 @@ h2.btn.btn-primary, h2.btn.btn-primary a {
   background-color: #940946;
   transition: background-color .3s;
 }
+
 nav svg.menu-icon {
   fill: #fff;
 }
