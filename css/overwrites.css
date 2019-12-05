@@ -4,9 +4,23 @@
   font-family: 'Raleway', sans-serif !important;
 }
 
-.btn-primary:active, .btn-primary:hover, .btn-primary:focus {
-  border-color: none !important;
-  box-shadow: none !important;
+.btn.btn-primary {
+  transition: background-color .3s, color .3s, border .3s;
+  border: 2px solid #940946;
+}
+h2.btn.btn-primary, h2.btn.btn-primary a {
+  transition: background-color .3s, color .3s, border .3s;
+  color: #fff;
+}
+.btn.btn-primary:active, .btn.btn-primary:hover, .btn.btn-primary:focus {
+  border: 2px solid #940946 !important;
+  color: #940946 !important;
+  background-color: #fff !important;
+}
+h2.btn.btn-primary:hover, h2.btn.btn-primary:hover a,
+h2.btn.btn-primary:active, h2.btn.btn-primary:active a,
+h2.btn.btn-primary:focus, h2.btn.btn-primary:focus a {
+  color: #940946 !important;
 }
 
 #mainNav {
@@ -146,7 +160,7 @@ header.masthead .intro-text .intro-heading {
   flex-direction: column;
   align-items: center;
 }
-.page-section-content a, .page-section-content a:active {
+.page-section-content a {
   color: #fff;
 }
 .page-section-content h2.section-heading {
@@ -169,7 +183,6 @@ header.masthead .intro-text .intro-heading {
 }
 #sentienceinstitute .section-subheading {
   text-align: left;
-  color: #fff;
 }
 #sentienceinstitute .page-section-description .section-subheading span:not(:first-of-type) {
   display: block;
@@ -180,6 +193,9 @@ header.masthead .intro-text .intro-heading {
   height: 1em;
 }
 
+.hover-text {
+  cursor: pointer;
+}
 #google .wink-icon svg {
   color: #940946;
   height: 16px;
@@ -188,26 +204,31 @@ header.masthead .intro-text .intro-heading {
 section.bg-light {
   background-color: #e9ecef !important;
 }
-.portfolio .row {
-  justify-content: center;
-}
-.portfolio-caption {
-  height: 200px;
+
+#portfolio .portfolio-item .portfolio-link {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.portfolio-link .gif-container {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
   justify-content: center;
 }
-.portfolio-link:hover {
-  text-decoration: none;
-}
 .portfolio-link-image {
-  display: block;
-  height: 200px;
-  background-position: center;
-  background-size: cover;
+  height: 100%;
 }
-#portfolio .portfolio-item .portfolio-caption h4 {
+.portfolio-link .btn {
+  margin-top: 25px;
   margin-bottom: 15px;
+}
+.portfolio-link .btn h4 {
+  color: #fff;
+  margin-bottom: 0;
 }
 
 #resume .btn {
@@ -271,34 +292,62 @@ section#contact::before {
 ul.timeline li:last-of-type .timeline-image {
   background-color: #fff;
 }
-/* .timeline-desc {
-  text-align: left;
-  color: #940946;
-}
-.second-level-li {
-  margin-left: 25px;
-} */
 
 #contact .form-control::placeholder {
   color: #580027;
   font-weight: 400;
 }
 
-footer ul.social-buttons li a,
-footer ul.social-buttons li a:hover
-footer ul.social-buttons li a:active
+footer ul.social-buttons li a {
+  line-height: unset;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  transition: none !important;
+  background-color: #fff;
+  position: relative;
+  padding: 6px;
+  box-sizing: content-box;
+  border: 2px solid #fff;
+  transition: border .3s !important;
+}
+/* footer ul.social-buttons li a.active, */
+footer ul.social-buttons li a:hover,
+footer ul.social-buttons li a:active,
 footer ul.social-buttons li a:focus {
   background-color: #fff !important;
+  border: 2px solid #940946;
 }
 footer ul.social-buttons svg {
+  position: relative;
+  z-index: 1;
   color: #940946;
   height: 100%;
   transition: color .3s;
 }
+/* footer ul.social-buttons li a.active svg, */
 footer ul.social-buttons li a:hover svg,
 footer ul.social-buttons li a:active svg,
 footer ul.social-buttons li a:focus svg {
-  color: #580027;
+  color: #fff;
+}
+a .svg-background {
+  height: 43px;
+  width: 43px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: background-color .3s;
+}
+/* a.active .svg-background, */
+a:hover .svg-background,
+a:active .svg-background,
+a:focus .svg-background {
+  background-color: #940946;
 }
 
 @media (min-width: 992px) {
