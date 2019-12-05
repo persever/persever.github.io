@@ -27,17 +27,17 @@ h2.btn.btn-primary, h2.btn.btn-primary a {
   color: #fff;
 }
 .btn.btn-primary:active, .btn.btn-primary:hover, .btn.btn-primary:focus {
-  background-color: #580027 !important;
+  background-color: #3E001B !important;
 }
 /* .btn.btn-prrimary:active::before,
 .btn.btn-primary:hover::before,
 .btn.btn-primary:focus::before {
-  border-color: #580027;
+  border-color: #3E001B;
 } */
 
 #mainNav {
   transition: padding-top .6s, padding-bottom .6s;
-  background-color: #580027;
+  background-color: #3E001B;
 }
 
 #mainNav .navbar-brand,
@@ -54,7 +54,7 @@ h2.btn.btn-primary, h2.btn.btn-primary a {
 }
 
 #mainNav .navbar-toggler {
-  background-color: #580027;
+  background-color: #3E001B;
 }
 #mainNav .navbar-toggler:hover,
 #mainNav .navbar-toggler:active,
@@ -89,7 +89,7 @@ header.masthead .intro-text .intro-heading {
 }
 .intro-text .skills .skill:not(:last-of-type)::after {
   content: ' | ';
-  color: #580027;
+  color: #3E001B;
 }
 .intro-text .headshot img {
   border-radius: 50%;
@@ -97,7 +97,7 @@ header.masthead .intro-text .intro-heading {
   margin-top: 50px;
   /* border-width: 8px;
   border-style: solid;
-  border-color: #580027;
+  border-color: #3E001B;
   transition: border-color .6s; */
   /* box-shadow: 0px 0px 16px 2px rgba(88, 0, 39, 1);
   transition: box-shadow .6s;
@@ -249,7 +249,7 @@ section#contact::before {
 }
 #contact .form-control {
   background-color: rgba(255,255,255,.75);
-  color: #580027;
+  color: #3E001B;
 }
 
 .timeline>li {
@@ -260,7 +260,7 @@ section#contact::before {
   word-break: break-word;
 }
 .timeline .timeline-heading h4 {
-  color: #580027;
+  color: #3E001B;
 }
 .timeline>li .timeline-image {
   width: 20px;
@@ -274,7 +274,7 @@ section#contact::before {
   color: #940946;
 }
 .timeline-heading h3 {
-  color: #580027;
+  color: #3E001B;
 }
 .timeline .timeline-education .timeline-image {
   background-color: #DB9FBA;
@@ -288,7 +288,7 @@ ul.timeline li:last-of-type .timeline-image {
 }
 
 #contact .form-control::placeholder {
-  color: #580027;
+  color: #3E001B;
   font-weight: 400;
 }
 
@@ -306,7 +306,7 @@ footer ul.social-buttons svg {
 footer ul.social-buttons li a:hover svg,
 footer ul.social-buttons li a:active svg,
 footer ul.social-buttons li a:focus svg {
-  color: #580027;
+  color: #3E001B;
   cursor: pointer;
 }
 

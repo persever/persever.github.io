@@ -108,7 +108,7 @@ img::-moz-selection {
 }
 
 #mainNav {
-  background-color: #580027;
+  background-color: #3E001B;
 }
 
 #mainNav .navbar-toggler {
@@ -162,7 +162,7 @@ img::-moz-selection {
   #mainNav.navbar-shrink {
     padding-top: 0;
     padding-bottom: 0;
-    background-color: #580027;
+    background-color: #3E001B;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
@@ -364,7 +364,7 @@ header.masthead .intro-text .intro-heading {
   margin-left: 35px;
   /* IE 9 */
   transform: rotate(45deg);
-  background-color: #580027;
+  background-color: #3E001B;
 }
 
 .portfolio-modal .close-modal .lr .rl {
@@ -374,7 +374,7 @@ header.masthead .intro-text .intro-heading {
   height: 75px;
   /* IE 9 */
   transform: rotate(90deg);
-  background-color: #580027;
+  background-color: #3E001B;
 }
 
 .timeline {
@@ -585,7 +585,7 @@ header.masthead .intro-text .intro-heading {
 }
 
 section#contact {
-  background-color: #580027;
+  background-color: #3E001B;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -674,7 +674,7 @@ ul.social-buttons li a {
   color: white;
   border-radius: 100%;
   outline: none;
-  background-color: #580027;
+  background-color: #3E001B;
 }
 
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
