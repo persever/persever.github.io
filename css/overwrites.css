@@ -49,7 +49,7 @@ h2.btn.btn-primary, h2.btn.btn-primary a {
 #mainNav .navbar-brand:focus {
   color: #fff;
   line-height: 24px;
-  transition: color .3s, font-size .6s;
+  transition: color .3s, font-size .3s;
 }
 
 #mainNav .nav-link {
@@ -60,35 +60,53 @@ h2.btn.btn-primary, h2.btn.btn-primary a {
 #mainNav .nav-link:hover,
 #mainNav .nav-link:active,
 #mainNav .nav-link:focus {
-  color: #3E001B !important;
+  color: #3E001B;
 }
 #mainNav.navbar-shrink .navbar-brand:hover,
 #mainNav.navbar-shrink .nav-link:hover,
 #mainNav.navbar-shrink .nav-link:active,
 #mainNav.navbar-shrink .nav-link:focus {
-  color: #940946 !important;
+  color: #940946;
 }
 
 #mainNav .navbar-toggler,
 #mainNav.navbar-shrink .navbar-toggler[aria-expanded='true'],
 #mainNav.navbar-shrink .navbar-toggler:hover,
 #mainNav.navbar-shrink .navbar-toggler:active,
-#mainNav.navbar-shrink .navbar-toggler:focus
-{
+#mainNav.navbar-shrink .navbar-toggler:focus {
   background-color: #940946;
   transition: background-color .3s;
 }
 #mainNav.navbar-shrink .navbar-toggler[aria-expanded="false"],
 #mainNav:not(.navbar-shrink) .navbar-toggler:hover,
 #mainNav:not(.navbar-shrink) .navbar-toggler:active,
-#mainNav:not(.navbar-shrink) .navbar-toggler:focus
-{
+#mainNav:not(.navbar-shrink) .navbar-toggler:focus {
   background-color: #3E001B;
 }
-#mainNav:not(.navbar-shrink) .navbar-toggler[aria-expanded='false'] {
-  background-color: #940946;
+@media (max-width: 991px) {
+  #mainNav, #mainNav .navbar-toggler {
+    background-color: #3E001B;
+  }
+  #mainNav .navbar-brand:hover,
+  #mainNav .nav-link:hover,
+  #mainNav .nav-link:active,
+  #mainNav .nav-link:focus {
+    color: #940946;
+  }
+  #mainNav.navbar-shrink .navbar-toggler[aria-expanded="true"],
+  #mainNav:not(.navbar-shrink) .navbar-toggler:hover,
+  #mainNav:not(.navbar-shrink) .navbar-toggler:active,
+  #mainNav:not(.navbar-shrink) .navbar-toggler:focus {
+    background-color: #940946;
+  }
 }
 
+@media (min-width: 992px) {
+  #mainNav {
+    padding-top: 16px;
+    padding-bottom: 8px;
+  }
+}
 
 nav svg.menu-icon {
   fill: #fff;
@@ -204,6 +222,7 @@ header.masthead .intro-text .intro-heading {
 }
 #sentienceinstitute .section-subheading {
   text-align: left;
+  margin-bottom: 0;
 }
 #sentienceinstitute .page-section-description .section-subheading span:not(:first-of-type) {
   display: block;
@@ -346,12 +365,6 @@ footer ul.social-buttons li a:focus svg {
   cursor: pointer;
 }
 
-@media (min-width: 992px) {
-  #mainNav {
-    padding-top: 16px;
-    padding-bottom: 8px;
-  }
-}
 @media (min-width: 768px) {
   header.masthead .intro-text {
     padding: 0 !important;
