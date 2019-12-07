@@ -57,9 +57,10 @@ h2.btn.btn-primary, h2.btn.btn-primary a {
 }
 
 #mainNav .navbar-brand:hover,
-#mainNav .nav-link:hover,
-#mainNav .nav-link:active,
-#mainNav .nav-link:focus {
+#mainNav:not(.navbar-shrink) .navbar-nav .nav-item .nav-link:hover,
+#mainNav:not(.navbar-shrink) .navbar-nav .nav-item .nav-link:active,
+#mainNav:not(.navbar-shrink) .navbar-nav .nav-item .nav-link.active,
+#mainNav:not(.navbar-shrink) .navbar-nav .nav-item .nav-link:focus {
   color: #3E001B;
 }
 #mainNav.navbar-shrink .navbar-brand:hover,
