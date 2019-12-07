@@ -44,7 +44,7 @@ h2.btn.btn-primary, h2.btn.btn-primary a {
 }
 
 #mainNav .navbar-brand,
-#mainNav .navbar-brand:active,
+#mainNav .navbar-brand:hover,
 #mainNav .navbar-brand.active,
 #mainNav .navbar-brand:focus {
   color: #fff;
@@ -58,15 +58,12 @@ h2.btn.btn-primary, h2.btn.btn-primary a {
 
 #mainNav .navbar-brand:hover,
 #mainNav:not(.navbar-shrink) .navbar-nav .nav-item .nav-link:hover,
-#mainNav:not(.navbar-shrink) .navbar-nav .nav-item .nav-link:active,
-#mainNav:not(.navbar-shrink) .navbar-nav .nav-item .nav-link.active,
-#mainNav:not(.navbar-shrink) .navbar-nav .nav-item .nav-link:focus {
+#mainNav:not(.navbar-shrink) .navbar-nav .nav-item .nav-link.active {
   color: #3E001B;
 }
 #mainNav.navbar-shrink .navbar-brand:hover,
 #mainNav.navbar-shrink .nav-link:hover,
-#mainNav.navbar-shrink .nav-link:active,
-#mainNav.navbar-shrink .nav-link:focus {
+#mainNav.navbar-shrink .nav-link.active {
   color: #940946;
 }
 
@@ -90,8 +87,7 @@ h2.btn.btn-primary, h2.btn.btn-primary a {
   }
   #mainNav .navbar-brand:hover,
   #mainNav .nav-link:hover,
-  #mainNav .nav-link:active,
-  #mainNav .nav-link:focus {
+  #mainNav .nav-link.active {
     color: #940946;
   }
   #mainNav.navbar-shrink .navbar-toggler[aria-expanded="true"],
