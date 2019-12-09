@@ -214,7 +214,8 @@ header.masthead .intro-text .intro-heading {
 .page-section h2, .page-section h4 {
   color: #940946;
 }
-#sentienceinstitute .section-subheading, #google .section-subheading {
+
+.page-section h3.section-subheading {
   margin-bottom: 25px;
 }
 #sentienceinstitute .section-subheading {
@@ -256,6 +257,9 @@ section.bg-light {
   align-items: center;
   text-align: center;
 }
+#portfolio .portfolio-item {
+  margin: 25px 0 25px 0;
+}
 .portfolio-link .gif-container {
   height: 200px;
   width: 200px;
@@ -274,6 +278,10 @@ section.bg-light {
 .portfolio-link .btn h4 {
   color: #fff;
   margin-bottom: 0;
+}
+.portfolio-link-description {
+  color: #343a40;
+  text-align: left;
 }
 
 #resume .btn {
