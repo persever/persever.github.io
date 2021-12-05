@@ -4,19 +4,6 @@
   font-family: 'Raleway', sans-serif !important;
 }
 
-/* .btn.btn-primary::before {
-  position: absolute;
-  content: '';
-  height: calc(100% + 12px);
-  width: calc(100% + 12px);
-  top: -6px;
-  left: -6px;
-  border-width: 3px;
-  border-style: solid;
-  border-color: #940946;
-  border-radius: 8px;
-  transition: border-color .3s;
-} */
 .btn.btn-primary {
   position: relative;
   transition: background-color .3s;
@@ -29,17 +16,9 @@ h2.btn.btn-primary, h2.btn.btn-primary a {
 .btn.btn-primary:active, .btn.btn-primary:hover, .btn.btn-primary:focus {
   background-color: #3E001B !important;
 }
-/* .btn.btn-prrimary:active::before,
-.btn.btn-primary:hover::before,
-.btn.btn-primary:focus::before {
-  border-color: #3E001B;
-} */
 
 #mainNav {
   transition: padding-top .3s, padding-bottom .3s, background-color .3s;
-  background-color: rgba(62,0,27,0);
-}
-#mainNav.navbar-shrink {
   background-color: rgba(62,0,27,1);
 }
 
@@ -112,8 +91,10 @@ nav svg.menu-icon {
 header.masthead {
   background-image: none;
   background-color: #940946;
-  height: 100vh;
-  padding-top: 66px;
+  min-height: 100vh;
+  padding-top: 76px;
+  display: flex;
+  align-items: center;
 }
 header.masthead .container {
   display: flex;
@@ -128,16 +109,31 @@ header.masthead .intro-text {
 }
 header.masthead .intro-text .intro-heading {
   font-size: 40px;
-  margin-bottom: 25px;
-}
-.intro-text .skills .skill:not(:last-of-type)::after {
-  content: ' | ';
-  color: #3E001B;
+  margin-bottom: 0;
 }
 .intro-text .headshot img {
   border-radius: 50%;
   height: 250px;
-  margin: 50px;
+}
+.headshot-and-reference {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+.reference {
+  background-color: #3E001B;
+  margin-left: 50px;
+  padding: 25px;
+  border-radius: 10px;
+}
+.reference-header {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.skills .skill:not(:last-of-type)::after {
+  content: ' | ';
+  color: #DB9FBA;
 }
 
 .text-muted {
@@ -385,19 +381,31 @@ footer ul.social-buttons li a:focus svg {
   }
 }
 @media (max-width: 767px) {
+  header.masthead {
+    padding-top: 66px;
+  }
   header.masthead .intro-text .intro-heading {
-    margin-bottom: 15px;
+    padding-top: 25px;
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+  .headshot-and-reference {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    flex-direction: column;
+  }
+  .reference {
+    margin-top: 25px;
+    margin-left: 0px;
   }
 }
 @media (max-width:600px), (max-height:600px) {
-  header.masthead .intro-text .intro-heading,
   .page-section h2.section-heading {
     font-size: 30px;
     margin-bottom: 15px;
   }
   .intro-text .headshot img {
     height: 200px;
-    margin-top: 25px;
   }
 }
 @media (max-height:450px) {
