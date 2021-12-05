@@ -137,17 +137,7 @@ header.masthead .intro-text .intro-heading {
 .intro-text .headshot img {
   border-radius: 50%;
   height: 250px;
-  margin-top: 50px;
-  /* border-width: 8px;
-  border-style: solid;
-  border-color: #3E001B;
-  transition: border-color .6s; */
-  /* box-shadow: 0px 0px 16px 2px rgba(88, 0, 39, 1);
-  transition: box-shadow .6s;
-}
-#mainNav.navbar-shrink + .masthead .headshot img {
-  box-shadow: 0px 0px 8px 4px rgba(88, 0, 39, 0); */
-  /* border-color: #940946; */
+  margin: 50px;
 }
 
 .text-muted {
@@ -337,11 +327,13 @@ section#contact::before {
   color: #3E001B;
 }
 .timeline .timeline-education .timeline-image {
-  background-color: #DB9FBA;
+  background-color: #C5407A;
 }
-.timeline .timeline-education h3,
+.timeline .timeline-education h3 {
+  color: #832950;
+}
 .timeline .timeline-education h4.subheading {
-  color: #DB9FBA;
+  color: #C5407A;
 }
 ul.timeline li:last-of-type .timeline-image {
   background-color: #fff;
