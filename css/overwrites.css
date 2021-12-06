@@ -431,6 +431,10 @@ ul.timeline li.timeline-inverted .timeline-panel {
   padding: 0px 20px;
 }
 
+.timeline-role {
+  color: #3E001B;
+}
+
 @media (min-width: 768px) {
   header.masthead .intro-text {
     padding: 0 !important;
