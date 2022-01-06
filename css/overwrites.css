@@ -120,6 +120,10 @@ header.masthead .intro-text .intro-heading {
   margin-bottom: 0;
 }
 
+.intro-skills-divider {
+  color: #3E001B;
+}
+
 .intro-text .headshot img {
   border-radius: 50%;
   height: 250px;
@@ -143,13 +147,17 @@ header.masthead .intro-text .intro-heading {
   font-weight: bold;
 }
 
+.skills .skill {
+  color: #3e001b;
+}
+
 .skills .skill:not(:last-of-type)::after {
   content: ' | ';
-  color: #DB9FBA;
+  color: #C5407A;
 }
 
 .text-muted {
-  color: #DB9FBA !important;
+  color: #C5407A !important;
 }
 
 .container {
@@ -217,7 +225,6 @@ header.masthead .intro-text .intro-heading {
 .role-date {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #3E001B;
   margin-bottom: 10px;
 }
 
@@ -235,6 +242,7 @@ header.masthead .intro-text .intro-heading {
 .role-company {
   font-size: 2rem;
   font-weight: 700;
+  color: #3E001B;
 }
 
 .white {
@@ -309,11 +317,6 @@ section.bg-light {
   margin-bottom: 15px;
 }
 
-.portfolio-link .btn h4 {
-  color: #fff;
-  margin-bottom: 0;
-}
-
 .portfolio-link-description {
   color: #343a40;
   text-align: left;
@@ -360,10 +363,6 @@ section#contact::before {
   word-break: break-word;
 }
 
-.timeline .timeline-heading h4 {
-  color: #3E001B;
-}
-
 .timeline>li .timeline-image {
   width: 20px;
   height: 20px;
@@ -372,24 +371,21 @@ section#contact::before {
   transform: translateX(24px);
 }
 
-.timeline>li .timeline-heading h4 {
-  color: #940946;
+.timeline-date,
+.timeline-company {
+  color: #3E001B;
 }
 
-.timeline-heading h3 {
-  color: #3E001B;
+.timeline-company {
+  font-size: 1.2rem;
 }
 
 .timeline .timeline-education .timeline-image {
   background-color: #C5407A;
 }
 
-.timeline .timeline-education h3 {
-  color: #832950;
-}
-
-.timeline .timeline-education h4.subheading {
-  color: #C5407A;
+.timeline .timeline-education .subheading {
+  color: #3e001b;
 }
 
 ul.timeline li:last-of-type .timeline-image {
@@ -432,7 +428,13 @@ ul.timeline li.timeline-inverted .timeline-panel {
 }
 
 .timeline-role {
-  color: #3E001B;
+  color: #940946;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.timeline-role-student {
+  color: #C5407A;
 }
 
 @media (min-width: 768px) {
