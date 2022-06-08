@@ -120,8 +120,27 @@ header.masthead .intro-text .intro-heading {
   margin-bottom: 0;
 }
 
-.intro-skills-divider {
-  color: #3E001B;
+.intro-subheading {
+  font-weight: 400;
+  font-size: 26px;
+  color: #C5407A;
+  background-color: #3E001B;
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+.intro-subheading .company:not(:last-of-type)::after {
+  content: ' • ';
+  color: #940946;
+}
+
+.intro-skills {
+  opacity: 80%;
+}
+
+.intro-skills .skill:not(:last-of-type)::after {
+  content: ' • ';
+  color: #C5407A;
 }
 
 .intro-text .headshot img {
@@ -145,15 +164,6 @@ header.masthead .intro-text .intro-heading {
 .reference-header {
   font-size: 20px;
   font-weight: bold;
-}
-
-.skills .skill {
-  color: #3e001b;
-}
-
-.skills .skill:not(:last-of-type)::after {
-  content: ' | ';
-  color: #C5407A;
 }
 
 .text-muted {
@@ -356,6 +366,7 @@ section#contact::before {
 
 #contact .container {
   position: relative;
+  height: 200px;
 }
 
 #contact .section-heading {
