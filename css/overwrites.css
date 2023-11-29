@@ -1,5 +1,15 @@
 /* Overwrites */
 
+html {
+  --dark-grey: #343A40;
+  --dark-pink: #940946;
+  --light-grey: #E9ECEF;
+  --light-pink: #C5407A;
+  --maroon: #3E001B;
+  --eggplant: #260230;
+  --white: #FFFFFF;
+}
+
 * {
   font-family: 'Raleway', sans-serif !important;
 }
@@ -12,11 +22,11 @@
 
 h2.btn.btn-primary, h2.btn.btn-primary a {
   transition: background-color .3s;
-  color: #fff;
+  color: var(--white);
 }
 
 .btn.btn-primary:active, .btn.btn-primary:hover, .btn.btn-primary:focus {
-  background-color: #3E001B !important;
+  background-color: var(--maroon) !important;
 }
 
 #mainNav {
@@ -29,7 +39,7 @@ h2.btn.btn-primary, h2.btn.btn-primary a {
 #mainNav .navbar-brand.active,
 #mainNav .navbar-brand:focus {
   cursor: default;
-  color: #fff;
+  color: var(--white);
   line-height: 24px;
   transition: color .3s, font-size .3s;
 }
@@ -44,8 +54,8 @@ h2.btn.btn-primary, h2.btn.btn-primary a {
 
 #mainNav .nav-link:hover,
 #mainNav .nav-link.active {
-  background-color: #fff;
-  color: #C5407A;
+  background-color: var(--white);
+  color: var(--light-pink);
 }
 
 #mainNav .navbar-toggler,
@@ -53,7 +63,7 @@ h2.btn.btn-primary, h2.btn.btn-primary a {
 #mainNav.navbar-shrink .navbar-toggler:hover,
 #mainNav.navbar-shrink .navbar-toggler:active,
 #mainNav.navbar-shrink .navbar-toggler:focus {
-  background-color: #940946;
+  background-color: var(--dark-pink);
   transition: background-color .3s;
 }
 
@@ -61,7 +71,7 @@ h2.btn.btn-primary, h2.btn.btn-primary a {
 #mainNav:not(.navbar-shrink) .navbar-toggler:hover,
 #mainNav:not(.navbar-shrink) .navbar-toggler:active,
 #mainNav:not(.navbar-shrink) .navbar-toggler:focus {
-  background-color: #3E001B;
+  background-color: var(--maroon);
 }
 
 @media (max-width: 991px) {
@@ -72,28 +82,28 @@ h2.btn.btn-primary, h2.btn.btn-primary a {
     padding: 10px;
   }
   #mainNav, #mainNav .navbar-toggler {
-    background-color: #3E001B;
+    background-color: var(--maroon);
   }
   #mainNav .navbar-brand:hover,
   #mainNav .nav-link:hover,
   #mainNav .nav-link.active {
-    color: #940946;
+    color: var(--dark-pink);
   }
   #mainNav.navbar-shrink .navbar-toggler[aria-expanded="true"],
   #mainNav:not(.navbar-shrink) .navbar-toggler:hover,
   #mainNav:not(.navbar-shrink) .navbar-toggler:active,
   #mainNav:not(.navbar-shrink) .navbar-toggler:focus {
-    background-color: #940946;
+    background-color: var(--dark-pink);
   }
 }
 
 nav svg.menu-icon {
-  fill: #fff;
+  fill: var(--white);
 }
 
 header.masthead {
   background-image: none;
-  background-color: #260230;
+  background-color: var(--eggplant);
   min-height: 100vh;
   padding-top: 100px;
   display: flex;
@@ -105,56 +115,70 @@ header.masthead .container {
   align-items: center;
   justify-content: center;
   height: 100%;
-}
-
-header.masthead .intro-text {
-  display: flex;
   flex-direction: column;
-  padding: 0;
+  padding-bottom: 100px;
 }
 
-header.masthead .intro-text .intro-heading {
+header.masthead .container .intro-heading {
   font-size: 40px;
   margin-bottom: 0;
 }
 
 .intro-subheading {
-  font-size: 26px;
-  padding: 8px;
-  margin-bottom: 15px;
-  display: flex;
-  justify-content: center;
-}
-
-.intro-subheading .company {
-  color: #3E001B;
-}
-
-.intro-subheading .company:not(:last-of-type)::after {
-  content: ' • ';
-  color: #C5407A;
-  margin-right: 6px;
-}
-
-.skills {
+  font-size: 28px;
   opacity: 80%;
-  margin-bottom: 100px;
 }
 
-.skills .skill:not(:last-of-type)::after {
-  content: ' • ';
-  color: #C5407A;
-}
-
-.intro-text .headshot img {
+.masthead .container .headshot img {
   border-radius: 50%;
   height: 250px;
   margin: 25px;
 }
 
-.text-muted {
-  color: #C5407A !important;
+.responsive-testimonials--mq-992.responsive-testimonials--layout-row .responsive-testimonials__item {
+  flex-basis: unset;
 }
+
+.responsive-testimonials__img-box {
+  background: var(--white);
+  height: 100px;
+  width: 100px;
+}
+
+.responsive-testimonials__img {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  object-fit: contain;
+}
+
+.responsive-testimonials__desc p {
+  line-height: 1.375;
+}
+
+#skills {
+  background-color: var(--dark-pink);
+}
+
+#skills .skill {
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border: 2px solid var(--light-pink);
+  background-color: var(--dark-pink);
+  color: rgba(255,255,255,0.8);
+  display: inline-block;
+  padding: 4px 8px;
+  margin: 4px;
+}
+
+.text-pink {
+  color: var(--light-pink) !important;
+}
+
+.text-white {
+  color: var(--light-white);
+}
+
 
 .container {
   z-index: 2;
@@ -165,7 +189,7 @@ header.masthead .intro-text .intro-heading {
   display: flex;
   align-items: center;
   height: 80vh;
-  color: #fff;
+  color: var(--white);
   overflow: hidden;
 }
 
@@ -232,40 +256,29 @@ header.masthead .intro-text .intro-heading {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 10px;
+  color: var(--eggplant);
 }
 
 .page-section .container h2.section-heading {
   margin-bottom: 5px;
   max-width: 100%;
   word-break: break-word;
-  color: #940946;
-}
-
-.section-subheading {
-  margin-bottom: 25px;
+  color: var(--dark-pink);
 }
 
 .role-company {
   font-size: 2rem;
   font-weight: 700;
-  color: #3E001B;
+  color: var(--maroon);
+  margin-bottom: 20px;
 }
 
 .white {
-  color: #fff;
+  color: var(--white);
 }
 
 .spacing-bottom {
   margin-bottom: 15px !important;
-}
-
-.section-subheading {
-  margin-bottom: 25px;
-}
-
-#sentienceinstitute .section-subheading {
-  text-align: left;
-  margin-bottom: 0;
 }
 
 .in-text-icon {
@@ -277,21 +290,15 @@ header.masthead .intro-text .intro-heading {
   color: unset;
   text-decoration: underline;
   text-decoration-style: dotted;
-  text-decoration-color: #DB9FBA;
+  text-decoration-color: var(--light-pink);
 }
 
 .hover-text:hover {
   text-decoration: none;
 }
 
-#google .wink-icon svg {
-  color: #940946;
-  height: 16px;
-  width: 16px;
-}
-
 .bg-light {
-  background-color: #e9ecef !important;
+  background-color: var(--light-grey) !important;
 }
 
 #portfolio .portfolio-item .portfolio-link {
@@ -324,7 +331,7 @@ header.masthead .intro-text .intro-heading {
 }
 
 .portfolio-link-description {
-  color: #343a40;
+  color: var(--dark-grey);
   text-align: left;
 }
 
@@ -358,7 +365,7 @@ section#contact::before {
 
 #contact .form-control {
   background-color: rgba(255,255,255,.75);
-  color: #3E001B;
+  color: var(--maroon);
 }
 
 .timeline>li {
@@ -380,7 +387,7 @@ section#contact::before {
 
 .timeline-date,
 .timeline-company {
-  color: #3E001B;
+  color: var(--maroon);
 }
 
 .timeline-company {
@@ -388,19 +395,15 @@ section#contact::before {
 }
 
 .timeline .timeline-education .timeline-image {
-  background-color: #C5407A;
-}
-
-.timeline .timeline-education .subheading {
-  color: #3e001b;
+  background-color: var(--light-pink);
 }
 
 ul.timeline li:last-of-type .timeline-image {
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 #contact .form-control::placeholder {
-  color: #3E001B;
+  color: var(--maroon);
   font-weight: 400;
 }
 
@@ -408,19 +411,19 @@ footer ul.social-buttons li a {
   border-radius: 50%;
   height: 50px;
   width: 50px;
-  background-color: #e9ecef !important;
+  background-color: var(--light-grey) !important;
 }
 
 footer ul.social-buttons svg {
   transition: color .3s;
-  color: #940946;
+  color: var(--dark-pink);
   height: 100%;
 }
 
 footer ul.social-buttons li a:hover svg,
 footer ul.social-buttons li a:active svg,
 footer ul.social-buttons li a:focus svg {
-  color: #3E001B;
+  color: var(--maroon);
   cursor: pointer;
 }
 
@@ -435,22 +438,16 @@ ul.timeline li.timeline-inverted .timeline-panel {
 }
 
 .timeline-role {
-  color: #940946;
+  color: var(--dark-pink);
   font-weight: 600;
   font-size: 1.2rem;
 }
 
 .timeline-role-student {
-  color: #C5407A;
+  color: var(--light-pink);
 }
 
 @media (min-width: 768px) {
-  header.masthead .intro-text {
-    padding: 0 !important;
-  }
-  header.masthead .intro-text .intro-heading {
-    padding: 0 !important;
-  }
   .timeline>li {
     margin-bottom: 0px;
   }
@@ -468,7 +465,7 @@ ul.timeline li.timeline-inverted .timeline-panel {
   header.masthead {
     padding-top: 66px;
   }
-  header.masthead .intro-text .intro-heading {
+  header.masthead .container .intro-heading {
     padding-top: 25px;
     font-size: 30px;
     margin-bottom: 0;
@@ -485,13 +482,13 @@ ul.timeline li.timeline-inverted .timeline-panel {
     font-size: 30px;
     margin-bottom: 10px;
   }
-  .intro-text .headshot img {
+  .container .headshot img {
     height: 200px;
   }
 }
 
 @media (max-height:450px) {
-  .intro-text .headshot img {
+  .container .headshot img {
     height: 0px;
   }
 }
