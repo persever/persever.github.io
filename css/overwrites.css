@@ -65,6 +65,12 @@ h2.btn.btn-primary, h2.btn.btn-primary a {
 }
 
 @media (max-width: 991px) {
+  #mainNav .nav-item {
+    margin: 0 -10px;
+  }
+  #mainNav .nav-item .inner {
+    padding: 10px;
+  }
   #mainNav, #mainNav .navbar-toggler {
     background-color: #3E001B;
   }
