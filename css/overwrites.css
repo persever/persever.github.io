@@ -20,14 +20,15 @@ h2.btn.btn-primary, h2.btn.btn-primary a {
 }
 
 #mainNav {
-  transition: padding-top .3s, padding-bottom .3s, background-color .3s;
   background-color: rgba(62,0,27,1);
+  padding: 0;
 }
 
 #mainNav .navbar-brand,
 #mainNav .navbar-brand:hover,
 #mainNav .navbar-brand.active,
 #mainNav .navbar-brand:focus {
+  cursor: default;
   color: #fff;
   line-height: 24px;
   transition: color .3s, font-size .3s;
@@ -37,16 +38,14 @@ h2.btn.btn-primary, h2.btn.btn-primary a {
   transition: color .3s;
 }
 
-#mainNav .navbar-brand:hover,
-#mainNav:not(.navbar-shrink) .navbar-nav .nav-item .nav-link:hover,
-#mainNav:not(.navbar-shrink) .navbar-nav .nav-item .nav-link.active {
-  color: #3E001B;
+#mainNav .nav-item .inner {
+  padding: 10px 0;
 }
 
-#mainNav.navbar-shrink .navbar-brand:hover,
-#mainNav.navbar-shrink .nav-link:hover,
-#mainNav.navbar-shrink .nav-link.active {
-  color: #940946;
+#mainNav .nav-link:hover,
+#mainNav .nav-link.active {
+  background-color: #fff;
+  color: #C5407A;
 }
 
 #mainNav .navbar-toggler,
@@ -82,22 +81,15 @@ h2.btn.btn-primary, h2.btn.btn-primary a {
   }
 }
 
-@media (min-width: 992px) {
-  #mainNav {
-    padding-top: 16px;
-    padding-bottom: 8px;
-  }
-}
-
 nav svg.menu-icon {
   fill: #fff;
 }
 
 header.masthead {
   background-image: none;
-  background-color: #940946;
+  background-color: #260230;
   min-height: 100vh;
-  padding-top: 76px;
+  padding-top: 100px;
   display: flex;
   align-items: center;
 }
@@ -121,24 +113,29 @@ header.masthead .intro-text .intro-heading {
 }
 
 .intro-subheading {
-  font-weight: 400;
   font-size: 26px;
-  color: #C5407A;
-  background-color: #3E001B;
   padding: 8px;
   margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-subheading .company {
+  color: #3E001B;
 }
 
 .intro-subheading .company:not(:last-of-type)::after {
   content: ' • ';
-  color: #940946;
+  color: #C5407A;
+  margin-right: 6px;
 }
 
-.intro-skills {
+.skills {
   opacity: 80%;
+  margin-bottom: 100px;
 }
 
-.intro-skills .skill:not(:last-of-type)::after {
+.skills .skill:not(:last-of-type)::after {
   content: ' • ';
   color: #C5407A;
 }
@@ -146,24 +143,7 @@ header.masthead .intro-text .intro-heading {
 .intro-text .headshot img {
   border-radius: 50%;
   height: 250px;
-}
-
-.headshot-and-reference {
-  margin-top: 50px;
-  display: flex;
-  align-items: center;
-}
-
-.reference {
-  background-color: #3E001B;
-  margin-left: 50px;
-  padding: 25px;
-  border-radius: 10px;
-}
-
-.reference-header {
-  font-size: 20px;
-  font-weight: bold;
+  margin: 25px;
 }
 
 .text-muted {
@@ -185,6 +165,7 @@ header.masthead .intro-text .intro-heading {
 
 #sentienceinstitute, .video-background {
   position: relative;
+  background-image: url('../img/portfolio/sentienceinstitute.png');
 }
 
 .screen, .video-background {
@@ -231,10 +212,6 @@ header.masthead .intro-text .intro-heading {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.page-section .container a {
-  color: #fff;
 }
 
 .page-section .container a:hover {
@@ -307,7 +284,7 @@ header.masthead .intro-text .intro-heading {
   width: 16px;
 }
 
-section.bg-light {
+.bg-light {
   background-color: #e9ecef !important;
 }
 
@@ -425,7 +402,7 @@ footer ul.social-buttons li a {
   border-radius: 50%;
   height: 50px;
   width: 50px;
-  background-color: #fff !important;
+  background-color: #e9ecef !important;
 }
 
 footer ul.social-buttons svg {
@@ -489,15 +466,6 @@ ul.timeline li.timeline-inverted .timeline-panel {
     padding-top: 25px;
     font-size: 30px;
     margin-bottom: 0;
-  }
-  .headshot-and-reference {
-    margin-top: 25px;
-    margin-bottom: 25px;
-    flex-direction: column;
-  }
-  .reference {
-    margin-top: 25px;
-    margin-left: 0px;
   }
   ul.timeline li .timeline-panel,
   ul.timeline li.timeline .timeline-panel,

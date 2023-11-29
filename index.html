@@ -2,24 +2,22 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Kelly Anthis</title>
+  <title>Kelly Anthis, Senior Front-End Engineer</title>
   <link rel="shortcut icon" href="img/favicon_alt.png" type="image/png" />
 
   <link href='https://fonts.googleapis.com/css?family=Raleway:300,400,600' rel='stylesheet' type='text/css'>
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/agency.min.css" rel="stylesheet">
   <link href="css/overwrites.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="vendors/responsive-testimonials/responsive-testimonials.css" />
 </head>
 
 <body id="page-top">
-
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
@@ -30,19 +28,19 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+            <a class="nav-link js-scroll-trigger" href="#skills"><div class="inner">Skills</div></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#tesla">Key work history</a>
+            <a class="nav-link js-scroll-trigger" href="#amazon"><div class="inner">Key work history</div></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">AppAcademy</a>
+            <a class="nav-link js-scroll-trigger" href="#portfolio"><div class="inner">App Academy</div></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#resume">Resume</a>
+            <a class="nav-link js-scroll-trigger" href="#resume"><div class="inner">Resume</div></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            <a class="nav-link js-scroll-trigger" href="#contact"><div class="inner">Contact</div></a>
           </li>
         </ul>
       </div>
@@ -54,44 +52,86 @@
     <div class="container">
       <div class="intro-text">
         <h1 class="intro-heading text-uppercase">Senior Front End Engineer</h1>
-        <h2 class="intro-subheading">
-          <span class="company">Tesla</span>
-          <span class="company">UnitedHealth Group</span>
-          <span class="company">E*Trade</span>
-          <span class="company">Google</span>
-        </h2>
-        <p class="intro-skills">
+        <div class="headshot">
+          <img src="img/headshot_yellow.jpg" style="filter: contrast(105%);"/>
+        </div>
+
+        <div class="responsive-testimonals responsive-testimonals--layout-row">
+          <div class="responsive-testimonals__list">
+            <div class="responsive-testimonals__item responsive-testimonals__item--layout-order-2 responsive-testimonals__item--align-aside-center">
+                <div class="responsive-testimonals__aside">
+                  <div class="responsive-testimonals__img-box responsive-testimonals__rounded-full">
+                    <img class="responsive-testimonals__img responsive-testimonals__rounded-full" src="responsive-testimonals/img/1.jpg" width="142" height="142" alt="">
+                  </div>
+                </div>
+                <div class="responsive-testimonals__content responsive-testimonals__rounded-4">
+                  <div class="responsive-testimonals__content-body">
+                    <div class="responsive-testimonals__title">Manager</div>
+                    <div class="responsive-testimonals__subtitle">Google</div>
+                    <div class="responsive-testimonals__desc">
+                      “My team and I thoroughly enjoyed working with Kelly, she proved herself to be highly intelligent, a very fast learner and capable of almost any task we threw at her. Kelly is extremely technical and always delivers on time. Kelly ramped up to be effective in this highly competitive environment... I highly encourage you hire Kelly, she has immense potential and a proven track record of excelling at one of the most successful companies in the world.”
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="responsive-testimonals__item responsive-testimonals__item--layout-order-1 responsive-testimonals__item--align-aside-center">
+              <div class="responsive-testimonals__aside">
+                <div class="responsive-testimonals__img-box responsive-testimonals__rounded-full">
+                  <img class="responsive-testimonals__img responsive-testimonals__rounded-full" src="responsive-testimonals/img/2.jpg" width="142" height="142" alt="">
+                </div>
+              </div>
+              <div class="responsive-testimonals__content responsive-testimonals__rounded-4">
+                <div class="responsive-testimonals__content-body">
+                <div class="responsive-testimonals__title">Title 2</div>
+                <div class="responsive-testimonals__subtitle">Subtitle 2</div>
+                <div class="responsive-testimonals__desc">
+                  Description 2
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills">
           <span class="skill">JavaScript</span>
           <span class="skill">Typescript</span>
-          <span class="skill">React Web</span>
-          <span class="skill">React Native</span>
-          <span class="skill">Node</span>
-          <span class="skill">HTML</span>
+          <span class="skill">React Web & Native</span>
+          <span class="skill">Node.js</span>
+          <span class="skill">Next.js</span>
+          <span class="skill">Semantic HTML</span>
           <span class="skill">CSS</span>
           <span class="skill">Sass</span>
+          <span class="skill">A11y</span>
+          <span class="skill">Unit Testing</span>
           <span class="skill">UX Design</span>
-          <span class="skill">Accessibility</span>
-          <span class="skill">Project Management</span>
-        </p>
-        <div class="headshot-and-reference">
-          <div class="headshot">
-            <img src="img/headshot_yellow.jpg" style="filter: contrast(105%);"/>
-          </div>
-
-          <div class="reference text-left">
-            <p class="reference-header">Kelly's manager at Google said:</p>
-            <p><i>“My team and I thoroughly enjoyed working with Kelly, she proved herself to be highly intelligent, a very fast learner and capable of almost any task we threw at her. Kelly is extremely technical and always delivers on time. Kelly ramped up to be effective in this highly competitive environment... I highly encourage you hire Kelly, she has immense potential and a proven track record of excelling at one of the most successful companies in the world.”</i></p>
-          </div>
+          <span class="skill">Management</span>
         </div>
       </div>
     </div>
   </header>
 
-  <section class="page-section" id="tesla">
+  <section class="page-section" id="amazon">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
           <div class="role-date">May 2022-Present</div>
+          <h2 class="section-heading text-uppercase">Front End Engineer II</h2>
+          <div class="role-company">Amazon (Prime Video)</div>
+          <br>
+          <p>
+            Built UIs for <a href="https://www.amazon.com/Wheel-Time-Season-2/dp/B0C942RTL1#insidetheepisodes">Explore</a> experience on Prime Video titles.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-light page-section" id="tesla">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="role-date">2022</div>
           <h2 class="section-heading text-uppercase">Senior Software Development Engineer</h2>
           <div class="role-company">Tesla</div>
           <br>
@@ -103,7 +143,7 @@
     </div>
   </section>
 
-  <section class="bg-light page-section" id="uhg">
+  <section class="page-section" id="uhg">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
@@ -119,13 +159,13 @@
     </div>
   </section>
 
-  <section class="page-section" id="inrhythm">
+  <section class="bg-light page-section" id="inrhythm">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
           <div class="role-date">Mar 2020-Sep 2021</div>
           <h2 class="section-heading text-uppercase">Senior Design Technologist</h2>
-          <div class="role-company">E*TRADE via InRhythm</div>
+          <div class="role-company">E*TRADE (consulting via InRhythm)</div>
           <br>
           <p>
             <span>Contributed to React, styles, and documentation repos for internal design system.</span>
@@ -135,7 +175,7 @@
     </div>
   </section>
 
-  <section class="bg-light page-section video-section" id="sentienceinstitute">
+  <section class="page-section video-section" id="sentienceinstitute">
     <div class="screen"></div>
     <div class="video-background"></div>
     <div class="container">
@@ -149,7 +189,7 @@
               </a>
             </h2>
             <p>
-              <span>Custom website design and development for NGO. Page content sourced from GDocs.</span>
+              <span>Custom website design and development for NGO. Automated text content sourcing from GDocs downloads.</span>
             </p>
           </div>
         </div>
@@ -168,7 +208,7 @@
           <p>
             <span>Produced proprietary prototypes and <span class="hover-text">prototyping products</span> </span>
             <span class="wink-icon">
-              <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="grin-wink" class="svg-inline--fa fa-grin-wink fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M328 180c-25.69 0-55.88 16.92-59.86 42.12-1.75 11.22 11.5 18.24 19.83 10.84l9.55-8.48c14.81-13.19 46.16-13.19 60.97 0l9.55 8.48c8.48 7.43 21.56.25 19.83-10.84C383.88 196.92 353.69 180 328 180zm-160 60c17.67 0 32-14.33 32-32s-14.33-32-32-32-32 14.33-32 32 14.33 32 32 32zm185.55 64.64c-25.93 8.3-64.4 13.06-105.55 13.06s-79.62-4.75-105.55-13.06c-9.94-3.13-19.4 5.37-17.71 15.34C132.67 367.13 196.06 400 248 400s115.33-32.87 123.26-80.02c1.68-9.89-7.67-18.48-17.71-15.34zM248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm0 448c-110.28 0-200-89.72-200-200S137.72 56 248 56s200 89.72 200 200-89.72 200-200 200z"></path></svg>
+              <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="grin-wink" class="svg-inline--fa fa-grin-wink fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="#C5407A" d="M328 180c-25.69 0-55.88 16.92-59.86 42.12-1.75 11.22 11.5 18.24 19.83 10.84l9.55-8.48c14.81-13.19 46.16-13.19 60.97 0l9.55 8.48c8.48 7.43 21.56.25 19.83-10.84C383.88 196.92 353.69 180 328 180zm-160 60c17.67 0 32-14.33 32-32s-14.33-32-32-32-32 14.33-32 32 14.33 32 32 32zm185.55 64.64c-25.93 8.3-64.4 13.06-105.55 13.06s-79.62-4.75-105.55-13.06c-9.94-3.13-19.4 5.37-17.71 15.34C132.67 367.13 196.06 400 248 400s115.33-32.87 123.26-80.02c1.68-9.89-7.67-18.48-17.71-15.34zM248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm0 448c-110.28 0-200-89.72-200-200S137.72 56 248 56s200 89.72 200 200-89.72 200-200 200z"></path></svg>
             </span>
           </p>
         </div>
@@ -225,13 +265,25 @@
       <div class="row timeline-row">
         <div class="col-lg-12">
           <ul class="timeline">
-            <li class="timeline-inverted">
+            <li>
               <div class="timeline-image">
                 <div class="rounded-circle"></div>
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
                   <div class="timeline-date">2022-Present</div>
+                  <div class="timeline-role">Front End Engineer II</div>
+                  <div class="timeline-company">Amazon (Prime Video)</div>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <div class="rounded-circle"></div>
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <div class="timeline-date">2022</div>
                   <div class="timeline-role">Senior Software Development Engineer</div>
                   <div class="timeline-company">Tesla</div>
                 </div>
@@ -257,7 +309,7 @@
                 <div class="timeline-heading">
                   <div class="timeline-date">2020-2021</div>
                   <div class="timeline-role">Senior Design Technologist</div>
-                  <div class="timeline-company">InRhythm, consulting to E*TRADE</div>
+                  <div class="timeline-company">E*TRADE (consulting via InRhythm)</div>
                 </div>
               </div>
             </li>
@@ -267,7 +319,7 @@
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <div class="timeline-date">2017-2020</div>
+                  <div class="timeline-date">2016-2020</div>
                   <div class="timeline-role">Co-Founder & Executive Director</div>
                   <div class="timeline-company">Sentience Institute</div>
                 </div>
@@ -279,25 +331,13 @@
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <div class="timeline-date">2016-2017</div>
-                  <div class="timeline-role">Director of Communications</div>
-                  <div class="timeline-company">Sentience Politics</div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="timeline-image">
-                <div class="rounded-circle"></div>
-              </div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
                   <div class="timeline-date">2015-2016</div>
                   <div class="timeline-role">UX Engineer</div>
                   <div class="timeline-company">Google</div>
                 </div>
               </div>
             </li>
-            <li class="timeline-inverted timeline-education">
+            <li class="timeline-education">
               <div class="timeline-image">
                 <div class="rounded-circle"></div>
               </div>
@@ -305,19 +345,7 @@
                 <div class="timeline-heading">
                   <div class="timeline-date">2015</div>
                   <div class="timeline-role timeline-role-student">Student</div>
-                  <div class="timeline-company">AppAcademy Coding Bootcamp</div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="timeline-image">
-                <div class="rounded-circle"></div>
-              </div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <div class="timeline-date">2014</div>
-                  <div class="timeline-role">Caregiver</div>
-                  <div class="timeline-company">Animal Place Rescue Ranch</div>
+                  <div class="timeline-company">App Academy Full-Stack Coding Bootcamp</div>
                 </div>
               </div>
             </li>
@@ -327,9 +355,9 @@
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <div class="timeline-date">2013-2014</div>
-                  <div class="timeline-role">Co-Organizer & Graphic Designer</div>
-                  <div class="timeline-company">Direct Action Everywhere</div>
+                  <div class="timeline-date">2014</div>
+                  <div class="timeline-role">Caregiver</div>
+                  <div class="timeline-company">Animal Place</div>
                 </div>
               </div>
             </li>
@@ -345,7 +373,7 @@
                 </div>
               </div>
             </li>
-            <li class="timeline">
+            <li aria-hidden="true" class="timeline">
               <div class="timeline-image">
               </div>
             </li>
@@ -400,7 +428,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="bg-light footer">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-4">
@@ -429,32 +457,31 @@
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Plugin JavaScript -->
+  <!-- Plugins -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Contact form JavaScript -->
-  <!-- <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script> -->
+  <script src="vendors/responsive-testimonials/responsive-testimonials.js"></script>
 
   <!-- Custom scripts for this template -->
   <script src="js/agency.min.js"></script>
 
-  <!-- My additions -->
+  <!-- Additions -->
   <script>
     (function () {
-      if ($(window).width() >= 1200) {
-        $('#sentienceinstitute .video-background').append($("<video autoplay muted loop src=\"videos/sentienceinstitute.mov\" type=\"video/mov\">"));
-      } else {
-        $('#sentienceinstitute .video-background').css("background-image", "url('img/portfolio/sentienceinstitute.png')");
-      }
+      $(document).ready(function () {
+        console.log('here, $(.responsive-testimonials) is', $('.responsive-testimonials'), "$('.responsive-testimonials').responsiveTestimonials is", $('.responsive-testimonials').responsiveTestimonials)
+        $('.responsive-testimonials').responsiveTestimonials();
+      });
+
+      // if ($(window).width() >= 1200) {
+      //   $('#sentienceinstitute .video-background').append($("<video autoplay muted loop src=\"videos/sentienceinstitute.mov\" type=\"video/mov\">"));
+      // }
 
       $('#google .hover-text').hover(
-        function () { $(this).html($.parseHTML('&nbsp;&nbsp;[prototyping tools]&nbsp;&nbsp;&nbsp;')).css('color', '#940946') },
+        function () { $(this).html($.parseHTML('&nbsp;&nbsp;(prototyping tools)&nbsp;&nbsp;&nbsp;')).css('color', '#C5407A') },
         function () { $(this).html('prototyping products').css('color', 'unset') }
       );
     })();
   </script>
-
 </body>
 
 </html>
