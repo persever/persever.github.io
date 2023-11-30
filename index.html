@@ -505,8 +505,10 @@
   <!-- Additions -->
   <script>
     $(document).ready(function () {
-      console.log('here A, $(.responsive-testimonials) is', $('.responsive-testimonials'), "$('.responsive-testimonials').responsiveTestimonials is", $('.responsive-testimonials').responsiveTestimonials)
       $('.responsive-testimonials').responsiveTestimonials();
+      $('body').click(e => {
+        $('.navbar-collapse').collapse('hide');
+      })
     });
   </script>
 </body>

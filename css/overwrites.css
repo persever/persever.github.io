@@ -81,6 +81,7 @@ a:hover {
 #mainNav .navbar-brand:hover,
 #mainNav .navbar-brand.active,
 #mainNav .navbar-brand:focus {
+  padding: 0 13px;
   color: var(--white);
   line-height: 24px;
   transition: color .3s, font-size .3s;
@@ -88,6 +89,10 @@ a:hover {
 
 #mainNav .nav-link {
   transition: color .3s;
+}
+
+#mainNav .nav-item:last-of-type {
+  border-bottom: 2px solid var(--med-yellow);
 }
 
 #mainNav .nav-item .inner {
@@ -131,14 +136,14 @@ a:hover {
   #mainNav .navbar-bar {
     box-sizing: content-box;
     max-width: 720px;
-    padding: 5px calc((100% - 720px) / 2);
+    padding: 0 calc((100% - 720px) / 2);
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   #mainNav .nav-item .inner {
-    padding: 5px calc((100% - 720px) / 2);
+    padding: 5px 13px;
   }
 }
 
