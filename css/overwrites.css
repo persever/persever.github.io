@@ -269,59 +269,6 @@ header.masthead .container .intro-heading {
   position: relative;
 }
 
-.page-section.video-section {
-  display: flex;
-  align-items: center;
-  height: 80vh;
-  color: var(--white);
-  overflow: hidden;
-}
-
-#sentienceinstitute, .video-background {
-  position: relative;
-  background-image: url('../img/portfolio/sentienceinstitute.png');
-}
-
-.screen, .video-background {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.screen {
-  z-index: 1;
-  background-color: #000;
-  opacity: .75;
-}
-
-.video-background {
-  background-size: cover;
-  background-position-x: 10%;
-  background-position-y: top;
-}
-
-.video-background video {
-  z-index: 0;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.sample-video-wrapper {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.sample-video {
-  max-width: 100%;
-  max-height: 400px;
-}
-
 .page-section .container {
   display: flex;
   flex-direction: column;
