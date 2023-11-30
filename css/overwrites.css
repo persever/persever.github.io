@@ -49,6 +49,10 @@ ul.social-buttons li a.bg-footer {
   font-family: 'Raleway', sans-serif !important;
 }
 
+body {
+  min-width: 300px;
+}
+
 .btn.btn-primary {
   box-shadow: var(--material-shadow);
   position: relative;
@@ -81,6 +85,7 @@ a:hover {
 }
 
 #mainNav .navbar-brand,
+#mainNav.navbar-shrink .navbar-brand,
 #mainNav .navbar-brand:hover,
 #mainNav .navbar-brand.active,
 #mainNav .navbar-brand:focus {
@@ -182,10 +187,19 @@ header.masthead .container .intro-heading {
 }
 
 .masthead .container .headshot img {
+  border: 3px solid var(--med-blue);
   border-radius: 50%;
-  border: 4px double var(--med-yellow);
+  box-sizing: content-box;
   height: 250px;
   margin: 25px;
+  opacity: 0;
+  transition: opacity 2s ease, box-shadow 1s;
+}
+.masthead .container .headshot.visible img {
+  opacity: 1;
+}
+.masthead .container .headshot.headshotborder img {
+  box-shadow: 0 0 0 3px var(--med-yellow);
 }
 
 .responsive-testimonials__title {
@@ -204,6 +218,37 @@ header.masthead .container .intro-heading {
 
 .responsive-testimonials--mq-992.responsive-testimonials--layout-row .responsive-testimonials__item {
   flex-basis: unset;
+}
+
+.responsive-testimonials__item:nth-child(odd) {
+  animation: slide-in-left 2s ease;
+}
+.responsive-testimonials__item:nth-child(even) {
+  animation: slide-in-right 2s ease;
+}
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 .responsive-testimonials__img.tesla-logo {

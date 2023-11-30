@@ -508,6 +508,10 @@
   <!-- Additions -->
   <script>
     $(document).ready(function () {
+      $('.headshot').addClass('visible');
+      setTimeout(() => {
+        $('.headshot').addClass('headshotborder');
+      }, 500);
       $('.responsive-testimonials').responsiveTestimonials();
       $('body').click(e => {
         $('.navbar-collapse').collapse('hide');
