@@ -22,7 +22,7 @@ a:hover {
 }
 
 .text-primary {
-  color: #940946 !important;
+  color: #940946;
 }
 
 h1,
@@ -98,8 +98,8 @@ img::-moz-selection {
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-color: #700735 !important;
-  border-color: #700735 !important;
+  background-color: #700735;
+  border-color: #700735;
   color: white;
 }
 
