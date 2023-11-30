@@ -20,22 +20,25 @@
   --material-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-.bg-light-1,
-ul.social-buttons li a.bg-light-1 {
+.bg-light-1 {
   background-color: var(--light-offwhite);
 }
 
-.bg-light-2,
-ul.social-buttons li a.bg-light-2 {
+.bg-light-2 {
+  background-color: var(--light-grey);
+}
+
+.bg-projects {
   background-color: var(--light-blue);
 }
 
-.bg-light-3 {
+.bg-resume {
   background-color: var(--light-beige);
 }
 
-.bg-light-4 {
-  background-color: var(--light-grey);
+.bg-footer,
+ul.social-buttons li a.bg-footer {
+  background-color: var(--light-blue);
 }
 
 .bolder {
@@ -91,10 +94,6 @@ a:hover {
   transition: color .3s;
 }
 
-#mainNav .nav-item:last-of-type {
-  border-bottom: 2px solid var(--med-yellow);
-}
-
 #mainNav .nav-item .inner {
   padding: 10px 0;
 }
@@ -141,6 +140,9 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  #mainNav .nav-item:last-of-type {
+    border-bottom: 2px solid var(--med-yellow);
   }
   #mainNav .nav-item .inner {
     padding: 5px 13px;
