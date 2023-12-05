@@ -15,6 +15,8 @@
   --dark-blue: #212936;
   --dark-green: #373d3d;
 
+  --timeline-student: var(--dark-green);
+
   --white: #ffffff;
 
   --material-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -71,10 +73,11 @@ body {
   color: var(--med-blue);
 }
 
-a {
-  color: var(--med-yellow);
+.in-text-link  {
+  color: var(--med-blue);
+  text-decoration: underline dotted;
 }
-a:hover {
+.in-text-link:hover {
   color: var(--med-red);
 }
 
@@ -165,6 +168,7 @@ header.masthead {
   padding-top: 100px;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 header.masthead .container {
@@ -329,7 +333,7 @@ header.masthead .container .intro-heading {
   background-color: var(--med-yellow);
   border-radius: 4px;
   box-shadow: var(--material-shadow);
-  color: var(--light-offwhite);
+  color: var(--white);
   display: inline-block;
   padding: 4px 8px;
   margin: 4px;
@@ -449,11 +453,12 @@ header.masthead .container .intro-heading {
   font-size: 1.2rem;
 }
 
+
 .timeline .timeline-education .timeline-image {
-  background-color: var(--med-yellow);
+  background-color: var(--timeline-student);
 }
 .timeline-role-student {
-  color: var(--med-yellow);
+  color: var(--timeline-student);
 }
 
 ul.timeline li:last-of-type .timeline-image {
