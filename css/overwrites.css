@@ -100,10 +100,14 @@ body {
 
 #mainNav .nav-link {
   transition: color .3s;
+  display: flex;
+  justify-content: center;
 }
 
 #mainNav .nav-item .inner {
+  max-width: 720px;
   padding: 10px 0;
+  width: 100%;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
@@ -387,18 +391,19 @@ header.masthead .container .intro-heading {
   height: 1em;
 }
 
-#portfolio .portfolio-item .portfolio-link {
+#portfolio .portfolio-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  cursor: default;
 }
 
 #portfolio .portfolio-item {
   margin: 25px 0 25px 0;
 }
 
-.portfolio-link .gif-container {
+.gif-container {
   height: 200px;
   width: 200px;
   border-radius: 50%;
@@ -407,17 +412,18 @@ header.masthead .container .intro-heading {
   justify-content: center;
 }
 
-.portfolio-link-image {
+.portfolio-item-image {
   height: 100%;
 }
 
-.portfolio-link .btn {
+.portfolio-item .btn {
   margin-top: 25px;
   margin-bottom: 15px;
 }
 
-.portfolio-link-description {
+.portfolio-item-description {
   text-align: left;
+  width: 100%;
 }
 
 #resume .btn {
